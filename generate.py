@@ -54,6 +54,10 @@ def generate_language(data: tuple[dict[str, list[str]], tuple[list[str], list[st
     funcap_html = funcap_html.replace("<!-- TT LANGUAGE TT -->", lang)
     funcap_html = funcap_html.replace("<!-- TT VARIANT TT -->", variant)
 
+    processed_description = "<br>".join(description)
+    processed_instruction = "<br>".join(instruction)
+    funcap_html = funcap_html.replace("<!-- TT DESCRIPTION TT -->", f"<p>\n{processed_description}\n</p>\n<p>{processed_instruction}\n</p>")
+
     for section, questions in form.items():
         section_html = sections_template
         section_html = section_html.replace("<!-- TT SECTION TEXT TT -->", section)
@@ -86,7 +90,7 @@ generated_variants: list[tuple[str, str]] = []
 for file in os.listdir(langs_folder):
     lang = file.split('_')[1] # questions_en_55.txt -> en
     variant = file.split('_')[2].split('.')[0] # questions_en_55.txt -> en
-    
+
     parsed_data = parse_language(file)
     generate_language(parsed_data, lang, variant)
     generated_variants.append((lang, variant))
