@@ -13,13 +13,13 @@ B Walking – moving around
 11 Going for a longer walk. Approx. 1 km (0.6 mile), mostly level ground
 12 Going for a longer walk. Approx. 1 km (0.6 mile), hilly or varied terrain
 13 Physical activity with increased heart rate, for approx. 15 min
-14 Physical activity with increased heart rate, for approx. ½ hour
+14 Physical activity with increased heart rate, for approx. 1/2 hour
 C Being upright
-15 Sitting in bed for approx. ½ hour
+15 Sitting in bed for approx. 1/2 hour
 16 Sitting in an upright chair (dining chair) with feet on floor for approx. 10 minutes
 17 Sitting in an upright chair (dining chair) with feet on floor for approx. 2 hours
 18 Standing up for approx. 5 minutes, e.g. while queuing or while cooking
-19 Standing up for a long time – approx. ½ hour
+19 Standing up for a long time – approx. 1/2 hour
 D Activities in the home
 20 Light housework (dusting, tidying etc.) for approx. 1/2 hour continuously
 21 Heavier housework (washing floors, vacuuming etc.) for approx. 1/2 hour continuously
@@ -30,7 +30,7 @@ D Activities in the home
 E Communication
 26 Speaking a few words
 27 Having a conversation for approx. 5 minutes
-28 Having a conversation for approx. ½ hour
+28 Having a conversation for approx. 1/2 hour
 29 Writing a short message by hand
 30 Participating in a conversation with three people for approx. 1/2 hour
 31 Socializing with friends for approx. 1 hour
