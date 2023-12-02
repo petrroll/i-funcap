@@ -1,6 +1,7 @@
 import os
 
 langs_folder = "langs"
+output_folder = "output"
 
 def parse_language(file):
     print("Processing language: " + file)
@@ -10,22 +11,23 @@ def parse_language(file):
         current_section = None
 
         for line in f:
+            line = line.strip()
             if len(line) == 0: 
                 pass
             elif line[0].isalpha():
                 current_section = []
-                form[line.strip()] = current_section
+                form[line] = current_section
             elif line[0].isnumeric():
-                current_section.append(line.strip())
+                current_section.append(line)
 
     return form
 
 def generate_language(form, lang):
-    with open("funcap.template.html", 'r', encoding='utf-8') as f:
+    with open("templates/funcap.template.html", 'r', encoding='utf-8') as f:
         funcap_template = f.read()
-    with open("question.template.html", 'r', encoding='utf-8') as f:
+    with open("templates/question.template.html", 'r', encoding='utf-8') as f:
         questions_template = f.read()
-    with open("section.template.html", 'r', encoding='utf-8') as f:
+    with open("templates/section.template.html", 'r', encoding='utf-8') as f:
         sections_template = f.read()
 
     funcap_html = funcap_template
@@ -41,11 +43,11 @@ def generate_language(form, lang):
             section_html = section_html.replace("<!-- QUESTIONS -->", questions_html)
         funcap_html = funcap_html.replace("<!-- SECTIONS -->", section_html)
     
-    open(f"funcap.{lang}.html", 'w', encoding='utf-8').write(funcap_html)
+    open(f"{output_folder}/funcap.{lang}.html", 'w', encoding='utf-8').write(funcap_html)
     
 
 for file in os.listdir(langs_folder):
-    lang = file.split('_')[1].split('.')[0]
+    lang = file.split('_')[1].split('.')[0] # questions_en.txt -> en
     parsed_form = parse_language(file)
     generate_language(parsed_form, lang)
 
