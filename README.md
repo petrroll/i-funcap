@@ -9,12 +9,15 @@ WIP of unofficial interactive version of [FUNCAP pre-print](https://www.preprint
 Despite being WIP, any PRs welcome!
 
 ## Plan (feel free to contribute before I add it)
-- finish UI, i.e. add answers properly, general description
-- rip all questions for english, and some other language variant
+- add general description, add explanation of values (WIP)
+- rework UI/UX (I'm really not good at that, so please help) of the form itself
+- show where you fall in comparison with other people based on the data reported in the paper 
+- ask authors if its ok?
+- storing intermediate results in local storage so that one can fill in not in one go
+- add proper header with language and type selection instead of the awful approach with index.html
+- ~rip all questions for english~ (thanks!), and some other language variant
 - ~make it available on githubio domain or maybe under petrroll.cz somewhere?~ -> http://petrroll.cz/i-funcap/ for now
 - ~add support for generating 55 and 27 questions versions~ -> should be improved
-- show where you fall in the populations reported in the paper
-- ask authors if its ok?
 
 ## Current stack
 
