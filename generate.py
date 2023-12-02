@@ -58,6 +58,9 @@ def generate_language(data: tuple[dict[str, list[str]], tuple[list[str], list[st
     processed_instruction = "<br>".join(instruction)
     funcap_html = funcap_html.replace("<!-- TT DESCRIPTION TT -->", f"<p>\n{processed_description}\n</p>\n<p>{processed_instruction}\n</p>")
 
+    processed_options_explanation = "<br>".join(options_explanation)
+    funcap_html = funcap_html.replace("<!-- TT OPTIONS EXPLANATION TT -->", f"<p>\n{processed_options_explanation}\n</p>")
+
     for section, questions in form.items():
         section_html = sections_template
         section_html = section_html.replace("<!-- TT SECTION TEXT TT -->", section)
