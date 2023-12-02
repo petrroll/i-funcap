@@ -20,13 +20,12 @@ def parse_language(file: str):
     print("Processing language: " + file)
 
     with open(f"{langs_folder}/{file}", 'r', encoding='utf-8') as f:
-        form: dict[str, list[str]] = {}
-        current_section = None
-
         description = read_block_lines(f)
         instruction = read_block_lines(f)
         options_explanation = read_block_lines(f)
 
+        form: dict[str, list[str]] = {}
+        current_section = None
         for line in f:
             line = line.strip()
             if len(line) == 0: 
@@ -36,6 +35,8 @@ def parse_language(file: str):
                 form[line] = current_section
             elif line[0].isnumeric():
                 current_section.append(line)
+        if len(form) <= 0:
+            raise Exception("Unexpected no questions")
 
     return (form, (description, instruction, options_explanation))
 
@@ -85,6 +86,7 @@ generated_variants: list[tuple[str, str]] = []
 for file in os.listdir(langs_folder):
     lang = file.split('_')[1] # questions_en_55.txt -> en
     variant = file.split('_')[2].split('.')[0] # questions_en_55.txt -> en
+    
     parsed_data = parse_language(file)
     generate_language(parsed_data, lang, variant)
     generated_variants.append((lang, variant))
