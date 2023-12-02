@@ -60,5 +60,4 @@ H Concentration
 52 Watching TV (series, news)
 53 Focusing on a task for approx. 10 minutes continuously
 54 Focusing on a task for approx. 2 hours continuously
-55 Managing a full working day (non-physical work such as office work,
-classes or lectures)
+55 Managing a full working day (non-physical work such as office work, classes or lectures)
