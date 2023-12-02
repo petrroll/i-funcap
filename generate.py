@@ -47,10 +47,28 @@ def generate_language(form, lang, variant):
     
     open(f"{output_folder}/funcap.{lang}.{variant}.html", 'w', encoding='utf-8').write(funcap_html)
     
+def generate_index(variants):
+    with open("templates/index.template.html", 'r', encoding='utf-8') as f:
+        index_template = f.read()
+    with open("templates/link.template.html", 'r', encoding='utf-8') as f:
+        link_template = f.read()
 
+    index_html = index_template
+    for lang, variant in variants:
+        link_html = link_template
+        link_html = link_html.replace("TT LANG TT", lang)
+        link_html = link_html.replace("TT VARIANT TT", variant)
+        index_html = index_html.replace("<!-- TT LINKS TT -->", link_html)
+
+    open(f"{output_folder}/index.html", 'w', encoding='utf-8').write(index_html)
+
+generated_variants = []
 for file in os.listdir(langs_folder):
     lang = file.split('_')[1] # questions_en_55.txt -> en
     variant = file.split('_')[2].split('.')[0] # questions_en_55.txt -> en
     parsed_form = parse_language(file)
     generate_language(parsed_form, lang, variant)
+    generated_variants.append((lang, variant))
+
+generate_index(generated_variants)
 

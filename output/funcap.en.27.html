@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Questionnaire</title>
+    <style>
+      .section {
+        margin-bottom: 20px;
+      }
+      .question {
+        margin-bottom: 10px;
+      }
+      .answer {
+        margin-left: 20px;
+      }
+      .average {
+        font-weight: bold;
+        padding: 8px;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th,
+      td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Questionnaire en - 27</h1>
+    <div class="section" id="sectionA">
+  <h2>A Personal hygiene / basic functions</h2>
+  <table>
+    <tr>
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+    </tr>
+    <tr class="question">
+  <td>1 Using the toilet (not bedpan or bedside commode)</td>
+  <td><input type="radio" name="sectionA_question0" value="1" /></td>
+  <td><input type="radio" name="sectionA_question0" value="2" /></td>
+  <td><input type="radio" name="sectionA_question0" value="3" /></td>
+  <td><input type="radio" name="sectionA_question0" value="4" /></td>
+  <td><input type="radio" name="sectionA_question0" value="5" /></td>
+</tr>
+<!-- TT QUESTIONS TT -->
+
+  </table>
+  <div class="average">Average: 0</div>
+</div>
+<div class="section" id="sectionB">
+  <h2>B Walking – moving around</h2>
+  <table>
+    <tr>
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+    </tr>
+    <tr class="question">
+  <td>8 Walking a short distance indoors, from one room to another</td>
+  <td><input type="radio" name="sectionB_question0" value="1" /></td>
+  <td><input type="radio" name="sectionB_question0" value="2" /></td>
+  <td><input type="radio" name="sectionB_question0" value="3" /></td>
+  <td><input type="radio" name="sectionB_question0" value="4" /></td>
+  <td><input type="radio" name="sectionB_question0" value="5" /></td>
+</tr>
+<!-- TT QUESTIONS TT -->
+
+  </table>
+  <div class="average">Average: 0</div>
+</div>
+<!-- TT SECTIONS TT -->
+
+
+
+    <script>
+      function calculateAverage(sectionId) {
+        var section = document.getElementById(sectionId);
+        var questions = section.getElementsByClassName("question");
+        var total = 0;
+        var count = 0;
+
+        for (var i = 0; i < questions.length; i++) {
+          var question = questions[i];
+          var answers = question.getElementsByTagName("input");
+
+          for (var j = 0; j < answers.length; j++) {
+            if (answers[j].checked) {
+              total += parseInt(answers[j].value);
+              count++;
+              break;
+            }
+          }
+        }
+
+        var average = count > 0 ? total / count : 0;
+        section.getElementsByClassName("average")[0].innerHTML = "Average: " + average;
+      }
+
+      function addRecalculateHandlers(section) {
+        var questions = section.getElementsByClassName("question");
+
+        for (var i = 0; i < questions.length; i++) {
+          var question = questions[i];
+          var answers = question.getElementsByTagName("input");
+
+          for (var j = 0; j < answers.length; j++) {
+            answers[j].addEventListener("click", function () {
+              calculateAverage(section.id);
+            });
+          }
+        }
+      }
+
+      var sections = document.getElementsByClassName("section");
+      for (var i = 0; i < sections.length; i++) {
+        addRecalculateHandlers(sections[i]);
+      }
+    </script>
+  </body>
+</html>
