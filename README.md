@@ -4,7 +4,7 @@ WIP of unofficial interactive version of [FUNCAP pre-print](https://www.preprint
 
 ## How does it work?
 
-`generate.py` generates individual variants (`./output/funcap.<lang>.html`) based on `./templates/*.template.html` files and language specific questions in `/langs`. Currently very WIP, i.e. most questions are missing, there's no comparison with published cohorts, etc.
+`generate.py` generates individual variants (`./output/funcap.<lang>.<variant>.html`) based on `./templates/*.template.html` files and language and variant specific questions in `/langs`. Currently very WIP, i.e. most questions are missing, there's no comparison with published cohorts, etc.
 
 Despite being WIP, any PRs welcome!
 

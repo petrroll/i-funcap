@@ -22,7 +22,7 @@ def parse_language(file):
 
     return form
 
-def generate_language(form, lang):
+def generate_language(form, lang, variant):
     with open("templates/funcap.template.html", 'r', encoding='utf-8') as f:
         funcap_template = f.read()
     with open("templates/question.template.html", 'r', encoding='utf-8') as f:
@@ -32,6 +32,8 @@ def generate_language(form, lang):
 
     funcap_html = funcap_template
     funcap_html = funcap_html.replace("<!-- TT LANGUAGE TT -->", lang)
+    funcap_html = funcap_html.replace("<!-- TT VARIANT TT -->", variant)
+
     for section, questions in form.items():
         section_html = sections_template
         section_html = section_html.replace("<!-- TT SECTION TEXT TT -->", section)
@@ -43,11 +45,12 @@ def generate_language(form, lang):
             section_html = section_html.replace("<!-- TT QUESTIONS TT -->", questions_html)
         funcap_html = funcap_html.replace("<!-- TT SECTIONS TT -->", section_html)
     
-    open(f"{output_folder}/funcap.{lang}.html", 'w', encoding='utf-8').write(funcap_html)
+    open(f"{output_folder}/funcap.{lang}.{variant}.html", 'w', encoding='utf-8').write(funcap_html)
     
 
 for file in os.listdir(langs_folder):
-    lang = file.split('_')[1].split('.')[0] # questions_en.txt -> en
+    lang = file.split('_')[1] # questions_en_55.txt -> en
+    variant = file.split('_')[2].split('.')[0] # questions_en_55.txt -> en
     parsed_form = parse_language(file)
-    generate_language(parsed_form, lang)
+    generate_language(parsed_form, lang, variant)
 
