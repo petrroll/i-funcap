@@ -11,8 +11,8 @@ Despite being WIP, any PRs welcome!
 ## Plan (feel free to contribute before I add it)
 - finish UI, i.e. add answers properly, general description
 - rip all questions for english, and some other language variant
-- make it available on githubio domain or maybe under petrroll.cz somewhere?
-- add support for generating 55 and 27 questions versions
+- ~make it available on githubio domain or maybe under petrroll.cz somewhere?~ -> http://petrroll.cz/i-funcap/ for now
+- ~add support for generating 55 and 27 questions versions~ -> should be improved
 - show where you fall in the populations reported in the paper
 
 ## Current stack
