@@ -1,19 +1,36 @@
+from io import TextIOWrapper
 import os
 
 langs_folder = "langs"
 output_folder = "output"
 
-def parse_language(file):
+def read_block_lines(f: TextIOWrapper) -> list[str]:
+    lines = []
+    for line in f:
+        line = line.strip()
+        if len(line) == 0:
+            if len(lines) <= 0:
+                raise Exception("Unexpected Empty section")
+            break
+        else:
+            lines.append(line)
+    return lines
+
+def parse_language(file: str) -> dict[str, list[str]]:
     print("Processing language: " + file)
 
     with open(f"{langs_folder}/{file}", 'r', encoding='utf-8') as f:
         form = {}
         current_section = None
 
+        description = read_block_lines(f)
+        instruction = read_block_lines(f)
+        options_explanation = read_block_lines(f)
+
         for line in f:
             line = line.strip()
             if len(line) == 0: 
-                pass
+                raise Exception("Unexpected Empty line in file")
             elif line[0].isalpha():
                 current_section = []
                 form[line] = current_section
@@ -22,7 +39,7 @@ def parse_language(file):
 
     return form
 
-def generate_language(form, lang, variant):
+def generate_language(form: dict[str, list[str]], lang: str, variant: str):
     with open("templates/funcap.template.html", 'r', encoding='utf-8') as f:
         funcap_template = f.read()
     with open("templates/question.template.html", 'r', encoding='utf-8') as f:
@@ -47,7 +64,7 @@ def generate_language(form, lang, variant):
     
     open(f"{output_folder}/funcap.{lang}.{variant}.html", 'w', encoding='utf-8').write(funcap_html)
     
-def generate_index(variants):
+def generate_index(variants: list[tuple[str, str]]):
     with open("templates/index.template.html", 'r', encoding='utf-8') as f:
         index_template = f.read()
     with open("templates/link.template.html", 'r', encoding='utf-8') as f:
@@ -62,7 +79,7 @@ def generate_index(variants):
 
     open(f"{output_folder}/index.html", 'w', encoding='utf-8').write(index_html)
 
-generated_variants = []
+generated_variants: list[tuple[str, str]] = []
 for file in os.listdir(langs_folder):
     lang = file.split('_')[1] # questions_en_55.txt -> en
     variant = file.split('_')[2].split('.')[0] # questions_en_55.txt -> en
