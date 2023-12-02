@@ -4,7 +4,7 @@ WIP of unofficial interactive version of [FUNCAP pre-print](https://www.preprint
 
 ## How does it work?
 
-`generate.py` generates individual variants based on `*.template.html` files and language specific questions in `/langs`. Currently very WIP, i.e. most questions are missing, there's no comparison with published cohorts, etc.
+`generate.py` generates individual variants (`funcap.<lang>.html`) based on `*.template.html` files and language specific questions in `/langs`. Currently very WIP, i.e. most questions are missing, there's no comparison with published cohorts, etc.
 
 Despite being WIP, any PRs welcome!
 
@@ -14,3 +14,10 @@ Despite being WIP, any PRs welcome!
 - make it available on githubio domain or maybe under petrroll.cz somewhere?
 - add support for generating 55 and 27 questions versions
 - show where you fall in the populations reported in the paper
+
+## Current stack
+
+Pure HTML and vanilla js stitched together via python script that "templates". Want to keep it serverless to host on GitHub pages or so. If we decide to store results somewhere let's go API route and eg azure function or smth. The idea was to keep it as simple as possible hence no JS framework, no serverside, nothing.
+
+But as said, happy to be convinced that something shinnier would be better.
+
