@@ -16,11 +16,11 @@ def read_block_lines(f: TextIOWrapper) -> list[str]:
             lines.append(line)
     return lines
 
-def parse_language(file: str) -> dict[str, list[str]]:
+def parse_language(file: str):
     print("Processing language: " + file)
 
     with open(f"{langs_folder}/{file}", 'r', encoding='utf-8') as f:
-        form = {}
+        form: dict[str, list[str]] = {}
         current_section = None
 
         description = read_block_lines(f)
@@ -37,15 +37,17 @@ def parse_language(file: str) -> dict[str, list[str]]:
             elif line[0].isnumeric():
                 current_section.append(line)
 
-    return form
+    return (form, (description, instruction, options_explanation))
 
-def generate_language(form: dict[str, list[str]], lang: str, variant: str):
+def generate_language(data: tuple[dict[str, list[str]], tuple[list[str], list[str], list[str]]], lang: str, variant: str):
     with open("templates/funcap.template.html", 'r', encoding='utf-8') as f:
         funcap_template = f.read()
     with open("templates/question.template.html", 'r', encoding='utf-8') as f:
         questions_template = f.read()
     with open("templates/section.template.html", 'r', encoding='utf-8') as f:
         sections_template = f.read()
+
+    form, (description, instruction, options_explanation) = data
 
     funcap_html = funcap_template
     funcap_html = funcap_html.replace("<!-- TT LANGUAGE TT -->", lang)
@@ -83,8 +85,8 @@ generated_variants: list[tuple[str, str]] = []
 for file in os.listdir(langs_folder):
     lang = file.split('_')[1] # questions_en_55.txt -> en
     variant = file.split('_')[2].split('.')[0] # questions_en_55.txt -> en
-    parsed_form = parse_language(file)
-    generate_language(parsed_form, lang, variant)
+    parsed_data = parse_language(file)
+    generate_language(parsed_data, lang, variant)
     generated_variants.append((lang, variant))
 
 generate_index(generated_variants)
