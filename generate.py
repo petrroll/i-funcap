@@ -31,17 +31,17 @@ def generate_language(form, lang):
         sections_template = f.read()
 
     funcap_html = funcap_template
-    funcap_html = funcap_html.replace("<!-- LANGUAGE -->", lang)
+    funcap_html = funcap_html.replace("<!-- TT LANGUAGE TT -->", lang)
     for section, questions in form.items():
         section_html = sections_template
-        section_html = section_html.replace("<!-- SECTION TEXT -->", section)
-        section_html = section_html.replace("SECTION ID", f"section{section[0]}")
+        section_html = section_html.replace("<!-- TT SECTION TEXT TT -->", section)
+        section_html = section_html.replace("TT SECTION ID TT", f"section{section[0]}")
         for i, question in enumerate(questions):
             questions_html = questions_template
-            questions_html = questions_html.replace("<!-- QUESTION TEXT -->", question)
-            questions_html = questions_html.replace("SECTION NAME QUESTION NAME", f"section{section[0]}_question{i}")
-            section_html = section_html.replace("<!-- QUESTIONS -->", questions_html)
-        funcap_html = funcap_html.replace("<!-- SECTIONS -->", section_html)
+            questions_html = questions_html.replace("<!-- TT QUESTION TEXT TT -->", question)
+            questions_html = questions_html.replace("TT SECTION QUESTION ID TT", f"section{section[0]}_question{i}")
+            section_html = section_html.replace("<!-- TT QUESTIONS TT -->", questions_html)
+        funcap_html = funcap_html.replace("<!-- TT SECTIONS TT -->", section_html)
     
     open(f"{output_folder}/funcap.{lang}.html", 'w', encoding='utf-8').write(funcap_html)
     
