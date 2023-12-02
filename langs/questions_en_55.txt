@@ -28,3 +28,56 @@ A Personal hygiene / basic functions
 7 Getting dressed in regular clothes
 B Walking – moving around
 8 Walking a short distance indoors, from one room to another
+9 Walking a short continuous distance, approx. 100 m (length of a football field), in- or outdoors
+10 Walking between approx. 100 m and 1 km on level ground (length of 1 to 10 football fields)
+11 Going for a longer walk. Approx. 1 km (0.6 mile), mostly level ground
+12 Going for a longer walk. Approx. 1 km (0.6 mile), hilly or varied terrain
+13 Physical activity with increased heart rate, for approx. 15 min
+14 Physical activity with increased heart rate, for approx. 1/2 hour
+C Being upright
+15 Sitting in bed for approx. 1/2 hour
+16 Sitting in an upright chair (dining chair) with feet on floor for approx. 10 minutes
+17 Sitting in an upright chair (dining chair) with feet on floor for approx. 2 hours
+18 Standing up for approx. 5 minutes, e.g. while queuing or while cooking
+19 Standing up for a long time – approx. 1/2 hour
+D Activities in the home
+20 Light housework (dusting, tidying etc.) for approx. 1/2 hour continuously
+21 Heavier housework (washing floors, vacuuming etc.) for approx. 1/2 hour continuously
+22 Laundry (sorting, hanging up to dry and folding)
+23 Making a simple cold meal, such as a sandwich or cereal
+24 Cooking a simple hot meal
+25 Cooking a complicated meal from scratch, approx. 1 hour of preparation
+E Communication
+26 Speaking a few words
+27 Having a conversation for approx. 5 minutes
+28 Having a conversation for approx. 1/2 hour
+29 Writing a short message by hand
+30 Participating in a conversation with three people for approx. 1/2 hour
+31 Socializing with friends for approx. 1 hour
+32 Participating in a dinner party, party or family event
+F Activities outside your home
+33 Stepping right outside your home
+34 Going on a necessary errand, such as a doctor’s appointment
+35 Going to a shop for groceries
+36 Doing enjoyable leisure activities, such as going to a café, non-essential shopping etc
+37 Riding as a passenger in a car for approx. 15 minutes
+38 Using public transport (bus or train)
+39 Participating in organized leisure activities such as classes, sports etc
+G Reactions to light and sound
+40 Staying in a room with dim lighting for approx. 1/2 hour
+41 Staying in a room with normal lighting, without sunglasses, for approx. 1 hour
+42 Staying outdoors in daylight without sunglasses for approx. 2 hours
+43 Staying in an environment with the sound of a few people in quiet conversation for approx. 1 hour
+44 Staying in a noisy environment, (shopping mall, café or open plan office) for approx. 1 hour
+45 Going to a cinema, concert etc. with high noise levels
+H Concentration
+46 Reading a short text, such as a mobile phone text message
+47 Reading fiction/light reading
+48 Reading and understanding a non-fiction text, such as an official document one A4 page long
+49 Performing simple mental arithmetic
+50 Writing short messages on a smartphone or tablet
+51 Using social media to stay in touch with others
+52 Watching TV (series, news)
+53 Focusing on a task for approx. 10 minutes continuously
+54 Focusing on a task for approx. 2 hours continuously
+55 Managing a full working day (non-physical work such as office work, classes or lectures)
