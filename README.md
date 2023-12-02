@@ -1,6 +1,6 @@
 ## What is it?
 
-WIP of unofficial interactive version of [FUNCAP pre-print](https://www.preprints.org/manuscript/202309.2091/v1) questionnaire for assessing ME/CFS.
+WIP of unofficial interactive version of [FUNCAP pre-print](https://www.preprints.org/manuscript/202309.2091/v1) [questionnaire](https://www.preprints.org/manuscript/202309.2091/v1/download/supplementary) for assessing ME/CFS.
 
 ## How does it work?
 
@@ -14,6 +14,7 @@ Despite being WIP, any PRs welcome!
 - ~make it available on githubio domain or maybe under petrroll.cz somewhere?~ -> http://petrroll.cz/i-funcap/ for now
 - ~add support for generating 55 and 27 questions versions~ -> should be improved
 - show where you fall in the populations reported in the paper
+- ask authors if its ok?
 
 ## Current stack
 
