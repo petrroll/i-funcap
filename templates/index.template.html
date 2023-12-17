@@ -1,3 +1,136 @@
-<ul>
-<!-- TT LINKS TT -->
-</ul>
+<head>
+  <title>Questionnaire</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../static/img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+</head>
+
+<body>
+  <div class="content">
+    <div class="title">
+      <img class="title__logo" width="64" src="../static/img/logo.png" alt="ME/CFS questionnaire FUNCAP">
+      <h1 class="title__content"><span class="text-highlight">Fun</span class="text-highlight">&#8203;ctional <span
+          class="text-highlight">Cap</span class="text-highlight">&#8203;acity Assessment &mdash;&nbsp;a&nbsp;Questionnaire
+      </h1>
+    </div>
+    <div class="welcome">
+      <svg class="blob" viewBox="-110 -190 250 250" xmlns="http://www.w3.org/2000/svg">
+        <g>
+          <path
+            d="M120,-157.6C152.7,-141.5,174.3,-102.6,194.8,-58.8C215.3,-14.9,234.6,33.8,228.4,80.8C222.2,127.8,190.4,173.1,148.1,184C105.8,195,52.9,171.5,-2.4,174.8C-57.8,178.2,-115.6,208.4,-137.5,190.9C-159.3,173.3,-145.3,108,-153,56.3C-160.7,4.6,-190.2,-33.4,-178.3,-54.2C-166.4,-75.1,-113.2,-78.8,-76.6,-93.6C-40,-108.3,-20,-134.2,11.9,-150.5C43.7,-166.8,87.4,-173.6,120,-157.6Z"
+            fill="#ffbdcb" />
+        </g>
+      </svg>
+      <div class="welcome__left">
+        <div class="welcome__sidebar">
+
+          <h3 class="welcome__subtitle">
+            <div class="subtitle">Take a step towards<br>better understanding<br>your condition.</div>
+          </h3>
+          <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg"
+            version="1.1">
+            <defs>
+              <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+                  result="goo" />
+                <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+              </filter>
+            </defs>
+          </svg>
+        </div>
+      </div>
+      <div class="card welcome__right">
+        <h2 class="card__title">Get started</h2>
+        <p class="card__content">FUNCAP is a tailored questionnaire designed to accurately evaluate functional capacity
+          in ME/CFS patients.</p>
+
+        <p class="card__label">Select language:</p>
+        <div class="custom-select-wrapper">
+          <div class="custom-select">
+            <div class="custom-select__trigger"><span class="custom-select__value" id="lang_select"></span>
+              <div class="arrow"></div>
+            </div>
+            <div class="custom-options">
+              <!-- TT LANG OPTIONS TT -->
+            </div>
+          </div>
+        </div>
+
+        <p class="card__label">Select variant:</p>
+        <div class="custom-select-wrapper">
+          <div class="custom-select">
+            <div class="custom-select__trigger"><span class="custom-select__value" id="variant_select"></span>
+              <div class="arrow"></div>
+            </div>
+            <div class="custom-options">
+              <!-- TT VARIANT OPTIONS TT -->
+            </div>
+          </div>
+        </div>
+
+        <button class="btn card__btn" onclick='redirectToQuestionnaire()'>Start</button>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <a class="link footer__content" href="https://www.preprints.org/manuscript/202309.2091/v1" target="_blank">Based on a preprint 'Assessing Functional Capacity in ME/CFS'</a>
+    <a class="link" href="https://github.com/petrroll/i-funcap" target="_blank"><img width="28" src="../static/img/github-mark.svg" alt="GitHub project"></a>
+  </footer>
+  <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+      // Display default selected value in custom select
+      document.querySelectorAll('.custom-select-wrapper').forEach(wrapper => {
+        const selectedOption = wrapper.querySelector('.custom-option.selected');
+        if (selectedOption) {
+          const selectValue = wrapper.querySelector('.custom-select__value');
+          selectValue.textContent = selectedOption.textContent;
+        }
+      });
+  
+      // Get full language name
+      document.getElementById('lang_select').parentElement.nextElementSibling.querySelectorAll('.custom-option').forEach(option => {
+        option.textContent = getLanguageName(option.textContent);
+      });
+  
+      document.getElementById('lang_select').textContent = getLanguageName(document.getElementById('lang_select').textContent);
+    });
+  
+    function getLanguageName(languageCode) {
+        const displayNames = new Intl.DisplayNames(['en'], { type: 'language' });
+        return displayNames.of(languageCode);
+    }
+  
+    for (const dropdown of document.querySelectorAll(".custom-select-wrapper")) {
+      dropdown.addEventListener('click', function () {
+        this.querySelector('.custom-select').classList.toggle('open');
+      })
+    }
+  
+    for (const option of document.querySelectorAll(".custom-option")) {
+      option.addEventListener('click', function () {
+        if (!this.classList.contains('selected')) {
+          this.parentNode.querySelector('.custom-option.selected').classList.remove('selected');
+          this.classList.add('selected');
+          this.closest('.custom-select').querySelector('.custom-select__value').textContent = this.textContent;
+        }
+      })
+    }
+  
+    window.addEventListener('click', function (e) {
+      for (const select of document.querySelectorAll('.custom-select')) {
+        if (!select.contains(e.target)) {
+          select.classList.remove('open');
+        }
+      }
+    });
+  
+    function redirectToQuestionnaire() {
+      var lang = document.getElementById('lang_select').parentElement.nextElementSibling.querySelector('.custom-option.selected').getAttribute('data-value');
+      var variant = document.getElementById('variant_select').parentElement.nextElementSibling.querySelector('.custom-option.selected').getAttribute('data-value');
+      window.location.href = `funcap.${lang}.${variant}.html`;
+    }
+  </script>
+</body>
+</html>
