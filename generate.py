@@ -13,6 +13,7 @@ def read_block_lines(f: TextIOWrapper) -> list[str]:
                 raise Exception("Unexpected Empty section")
             break
         else:
+            line = line.replace("*", "<b>", 1).replace("*", "</b>", 1).replace(">>", "<span class=\"quote\">", 1).replace("<<", "</span>", 1)
             lines.append(line)
     return lines
 
@@ -34,7 +35,10 @@ def parse_language(file: str):
                 current_section = []
                 form[line] = current_section
             elif line[0].isnumeric():
-                current_section.append(line)
+                parts = line.split(' ', 1)
+                number = parts[0]
+                text = parts[1]
+                current_section.append(f"<span class=\"question__number\">{number}</span><span class=\"question__title\">{text}</span>")
         if len(form) <= 0:
             raise Exception("Unexpected no questions")
 
@@ -54,38 +58,60 @@ def generate_language(data: tuple[dict[str, list[str]], tuple[list[str], list[st
     funcap_html = funcap_html.replace("<!-- TT LANGUAGE TT -->", lang)
     funcap_html = funcap_html.replace("<!-- TT VARIANT TT -->", variant)
 
-    processed_description = "<br>".join(description)
-    processed_instruction = "<br>".join(instruction)
+    processed_description = "<br>".join(description).replace("%%", "<br>")
+    processed_instruction = "<br>".join(instruction).replace("%%", "<br>")
     funcap_html = funcap_html.replace("<!-- TT DESCRIPTION TT -->", f"<p>\n{processed_description}\n</p>\n<p>{processed_instruction}\n</p>")
 
-    processed_options_explanation = "<br>".join(options_explanation)
-    funcap_html = funcap_html.replace("<!-- TT OPTIONS EXPLANATION TT -->", f"<p>\n{processed_options_explanation}\n</p>")
+    processed_options_explanation = []
+    for line in options_explanation:
+        parts = line.replace("<b>", "").replace("</b>", "").split(" ", 1)
+        if len(parts) == 2:
+            number, text = parts
+            formatted_line = f"<p class=\"score__line\"><b>{number}</b><span>{text}</span></p>"
+            processed_options_explanation.append(formatted_line)
 
+    funcap_html = funcap_html.replace("<!-- TT OPTIONS EXPLANATION TT -->", "".join(processed_options_explanation))
+
+    section_header_html = ""
     for section, questions in form.items():
+        section_title = section.split(' ', 1)[1] if ' ' in section else section
+        section_header_html += f"<div data-section=\"section{section.split(' ', 1)[0]}\" class=\"result-overview__item\"><p>{section_title}</p><span class=\"result-overview__average\">0</span></div>"
+
         section_html = sections_template
-        section_html = section_html.replace("<!-- TT SECTION TEXT TT -->", section)
+        section_html = section_html.replace("<!-- TT SECTION LETTER TT -->", section.split(' ', 1)[0])
+        section_html = section_html.replace("<!-- TT SECTION TEXT TT -->", section.split(' ', 1)[1])
         section_html = section_html.replace("TT SECTION ID TT", f"section{section[0]}")
+
         for i, question in enumerate(questions):
             questions_html = questions_template
             questions_html = questions_html.replace("<!-- TT QUESTION TEXT TT -->", question)
-            questions_html = questions_html.replace("TT SECTION QUESTION ID TT", f"section{section[0]}_question{i}")
-            section_html = section_html.replace("<!-- TT QUESTIONS TT -->", questions_html)
-        funcap_html = funcap_html.replace("<!-- TT SECTIONS TT -->", section_html)
-    
+            question_id = f"section{section[0]}_question{i}"
+            questions_html = questions_html.replace("TT SECTION QUESTION ID TT", question_id)
+
+            for score in range(7):
+                explanation = options_explanation[score] if score < len(options_explanation) else ""
+                replace_str = f"<!-- TT OPTION LABEL TT -->"
+                with_explanation = f"<label class=\"question__label\" for=\"{question_id}_value{score}\">{explanation}</label>"
+                questions_html = questions_html.replace(replace_str, with_explanation, 1)
+
+            section_html = section_html.replace("<!-- TT QUESTIONS TT -->", questions_html, 1)
+        funcap_html = funcap_html.replace("<!-- TT SECTIONS TT -->", section_html, 1)
+
+    funcap_html = funcap_html.replace("<!-- TT RESULT TT -->", section_header_html)
     open(f"{output_folder}/funcap.{lang}.{variant}.html", 'w', encoding='utf-8').write(funcap_html)
     
 def generate_index(variants: list[tuple[str, str]]):
     with open("templates/index.template.html", 'r', encoding='utf-8') as f:
         index_template = f.read()
-    with open("templates/link.template.html", 'r', encoding='utf-8') as f:
-        link_template = f.read()
 
-    index_html = index_template
-    for lang, variant in variants:
-        link_html = link_template
-        link_html = link_html.replace("TT LANG TT", lang)
-        link_html = link_html.replace("TT VARIANT TT", variant)
-        index_html = index_html.replace("<!-- TT LINKS TT -->", link_html)
+    lang_options = {lang for lang, _ in variants}
+    variant_options = {variant for _, variant in variants}
+
+    lang_options_html = "\n".join([f"<span class='custom-option{' selected' if i == 0 else ''}' data-value='{lang}'>{lang}</span>" for i, lang in enumerate(lang_options)])
+    variant_options_html = "\n".join([f"<span class='custom-option{' selected' if i == 0 else ''}' data-value='{variant}'>{variant} questions</span>" for i, variant in enumerate(variant_options)])
+
+    index_html = index_template.replace("<!-- TT LANG OPTIONS TT -->", lang_options_html)
+    index_html = index_html.replace("<!-- TT VARIANT OPTIONS TT -->", variant_options_html)
 
     open(f"{output_folder}/index.html", 'w', encoding='utf-8').write(index_html)
 

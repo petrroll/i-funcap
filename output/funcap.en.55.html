@@ -1,51 +1,52 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Questionnaire</title>
-    <style>
-      .section {
-        margin-bottom: 20px;
-      }
-      .question {
-        margin-bottom: 10px;
-      }
-      .answer {
-        margin-left: 20px;
-      }
-      .average {
-        font-weight: bold;
-        padding: 8px;
-      }
-      table {
-        border-collapse: collapse;
-        width: 100%;
-      }
-      th,
-      td {
-        padding: 8px;
-        text-align: left;
-        border-bottom: 1px solid #ddd;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Questionnaire en - 55</h1>
-    <div class="description">
-      <p>
-This questionnaire evaluates your functional capacity for a range of activities. No days are the same. Base your response on an average day during the last month – not the worst nor the best. If a question concerns an activity that you have not performed, such as showering while seated because you always shower standing up, then score as you think this activity would have affected you.<br>Items described include necessary activities to perform them. Example: “Going to a shop for groceries” includes getting dressed and as necessary travelling.<br>It is a good idea to answer the questionnaire together with someone who sees you in everyday life.
-</p>
-<p>What are the consequences for you if you perform the activities described below?<br>To what extent does this affect how much else you can do?
-</p>
+
+<head>
+  <title>Questionnaire</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../static/img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+</head>
+
+<body>
+  <div class="content">
+    <div class="page title">
+      <a href="/">
+        <img class="title__logo" width="64" src="../static/img/logo.png" alt="ME/CFS questionnaire FUNCAP">
+      </a>
+      <div>
+        <h1 class="page title__content"><span class="text-highlight">Fun</span class="text-highlight">&#8203;ctional
+          <span class="text-highlight">Cap</span class="text-highlight">&#8203;acity Assessment
+          &mdash;&nbsp;a&nbsp;Questionnaire
+        </h1>
+        <h3 class="page-subtitle">(<span id="lang_select">en</span>, variant:
+          55 questions)
+        </h3>
+      </div>
     </div>
-    <div class="optionsExplanation">
-      <p>
-A to H: Scored 0-6:<br>0: I cannot do this<br>1: My capacity will be severely reduced for at least three days<br>2: I can do little else on the same day and for one to two days afterwards<br>3: I can do little else on the same day<br>4: I must limit other activities on the same day<br>5: This rarely affects other activities<br>6: Unproblematic – does not affect other activities
+
+    <div class="page card">
+      <h2 class="card__title">Before you start&mldr;</h2>
+      <img class="card__img" width="264" src="../static/img/ill_illustration.png" alt="ME/CFS">
+      <p class="card__content">
+        <p>
+<b>This questionnaire evaluates your functional capacity for a range of activities.</b> No days are the same. Base your response on an average day during the last month – not the worst nor the best.<br><br><b>If a question concerns an activity that you have not performed</b>, such as showering while seated because you always shower standing up, then score as you think this activity would have affected you.<br><br><b>Items described include necessary activities to perform them.</b><br>Example: “Going to a shop for groceries” includes getting dressed and as necessary travelling.<br><br>It is a good idea to <b>answer the questionnaire together with someone who sees you in everyday life</b>.<br>
 </p>
+<p><span class="quote">What are the consequences for you if you perform the activities described below? To what extent does this affect how much else you can do?</span>
+</p>
+      </p>
+
+      <div class="score">
+        <h4>How to grade?</h4>
+        <p class="score__line"><b>0</b><span>I cannot do this</span></p><p class="score__line"><b>1</b><span>My capacity will be severely reduced for at least three days</span></p><p class="score__line"><b>2</b><span>I can do little else on the same day and for one to two days afterwards</span></p><p class="score__line"><b>3</b><span>I can do little else on the same day</span></p><p class="score__line"><b>4</b><span>I must limit other activities on the same day</span></p><p class="score__line"><b>5</b><span>This rarely affects other activities</span></p><p class="score__line"><b>6</b><span>Unproblematic – does not affect other activities</span></p>
+      </div>
     </div>
-    <div class="section" id="sectionA">
-  <h2>A Personal hygiene / basic functions</h2>
+
+    <section class="section" id="sectionA">
+  <h2><span class="section__letter">A</span>Personal hygiene / basic functions</h2>
   <table>
-    <tr>
+    <tr class="question__scoring">
       <th></th>
       <th>0</th>
       <th>1</th>
@@ -56,74 +57,74 @@ A to H: Scored 0-6:<br>0: I cannot do this<br>1: My capacity will be severely re
       <th>6</th>
     </tr>
     <tr class="question">
-  <td>1 Using the toilet (not bedpan or bedside commode)</td>
-  <td><input type="radio" name="sectionA_question0" value="0" /></td>
-  <td><input type="radio" name="sectionA_question0" value="1" /></td>
-  <td><input type="radio" name="sectionA_question0" value="2" /></td>
-  <td><input type="radio" name="sectionA_question0" value="3" /></td>
-  <td><input type="radio" name="sectionA_question0" value="4" /></td>
-  <td><input type="radio" name="sectionA_question0" value="5" /></td>
-  <td><input type="radio" name="sectionA_question0" value="6" /></td>
+  <td><span class="question__number">1</span><span class="question__title">Using the toilet (not bedpan or bedside commode)</span></td>
+  <td><input type="radio" name="sectionA_question0" id="sectionA_question0_value0" value="0" /><label class="question__label" for="sectionA_question0_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionA_question0" id="sectionA_question0_value1" value="1" /><label class="question__label" for="sectionA_question0_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionA_question0" id="sectionA_question0_value2" value="2" /><label class="question__label" for="sectionA_question0_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionA_question0" id="sectionA_question0_value3" value="3" /><label class="question__label" for="sectionA_question0_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionA_question0" id="sectionA_question0_value4" value="4" /><label class="question__label" for="sectionA_question0_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionA_question0" id="sectionA_question0_value5" value="5" /><label class="question__label" for="sectionA_question0_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionA_question0" id="sectionA_question0_value6" value="6" /><label class="question__label" for="sectionA_question0_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <tr class="question">
-  <td>2 Brushing your teeth without assistance</td>
-  <td><input type="radio" name="sectionA_question1" value="0" /></td>
-  <td><input type="radio" name="sectionA_question1" value="1" /></td>
-  <td><input type="radio" name="sectionA_question1" value="2" /></td>
-  <td><input type="radio" name="sectionA_question1" value="3" /></td>
-  <td><input type="radio" name="sectionA_question1" value="4" /></td>
-  <td><input type="radio" name="sectionA_question1" value="5" /></td>
-  <td><input type="radio" name="sectionA_question1" value="6" /></td>
+  <td><span class="question__number">2</span><span class="question__title">Brushing your teeth without assistance</span></td>
+  <td><input type="radio" name="sectionA_question1" id="sectionA_question1_value0" value="0" /><label class="question__label" for="sectionA_question1_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionA_question1" id="sectionA_question1_value1" value="1" /><label class="question__label" for="sectionA_question1_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionA_question1" id="sectionA_question1_value2" value="2" /><label class="question__label" for="sectionA_question1_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionA_question1" id="sectionA_question1_value3" value="3" /><label class="question__label" for="sectionA_question1_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionA_question1" id="sectionA_question1_value4" value="4" /><label class="question__label" for="sectionA_question1_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionA_question1" id="sectionA_question1_value5" value="5" /><label class="question__label" for="sectionA_question1_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionA_question1" id="sectionA_question1_value6" value="6" /><label class="question__label" for="sectionA_question1_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <tr class="question">
-  <td>3 Showering seated, with assistance</td>
-  <td><input type="radio" name="sectionA_question2" value="0" /></td>
-  <td><input type="radio" name="sectionA_question2" value="1" /></td>
-  <td><input type="radio" name="sectionA_question2" value="2" /></td>
-  <td><input type="radio" name="sectionA_question2" value="3" /></td>
-  <td><input type="radio" name="sectionA_question2" value="4" /></td>
-  <td><input type="radio" name="sectionA_question2" value="5" /></td>
-  <td><input type="radio" name="sectionA_question2" value="6" /></td>
+  <td><span class="question__number">3</span><span class="question__title">Showering seated, with assistance</span></td>
+  <td><input type="radio" name="sectionA_question2" id="sectionA_question2_value0" value="0" /><label class="question__label" for="sectionA_question2_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionA_question2" id="sectionA_question2_value1" value="1" /><label class="question__label" for="sectionA_question2_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionA_question2" id="sectionA_question2_value2" value="2" /><label class="question__label" for="sectionA_question2_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionA_question2" id="sectionA_question2_value3" value="3" /><label class="question__label" for="sectionA_question2_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionA_question2" id="sectionA_question2_value4" value="4" /><label class="question__label" for="sectionA_question2_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionA_question2" id="sectionA_question2_value5" value="5" /><label class="question__label" for="sectionA_question2_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionA_question2" id="sectionA_question2_value6" value="6" /><label class="question__label" for="sectionA_question2_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <tr class="question">
-  <td>4 Showering seated, without assistance</td>
-  <td><input type="radio" name="sectionA_question3" value="0" /></td>
-  <td><input type="radio" name="sectionA_question3" value="1" /></td>
-  <td><input type="radio" name="sectionA_question3" value="2" /></td>
-  <td><input type="radio" name="sectionA_question3" value="3" /></td>
-  <td><input type="radio" name="sectionA_question3" value="4" /></td>
-  <td><input type="radio" name="sectionA_question3" value="5" /></td>
-  <td><input type="radio" name="sectionA_question3" value="6" /></td>
+  <td><span class="question__number">4</span><span class="question__title">Showering seated, without assistance</span></td>
+  <td><input type="radio" name="sectionA_question3" id="sectionA_question3_value0" value="0" /><label class="question__label" for="sectionA_question3_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionA_question3" id="sectionA_question3_value1" value="1" /><label class="question__label" for="sectionA_question3_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionA_question3" id="sectionA_question3_value2" value="2" /><label class="question__label" for="sectionA_question3_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionA_question3" id="sectionA_question3_value3" value="3" /><label class="question__label" for="sectionA_question3_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionA_question3" id="sectionA_question3_value4" value="4" /><label class="question__label" for="sectionA_question3_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionA_question3" id="sectionA_question3_value5" value="5" /><label class="question__label" for="sectionA_question3_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionA_question3" id="sectionA_question3_value6" value="6" /><label class="question__label" for="sectionA_question3_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <tr class="question">
-  <td>5 Showering standing up</td>
-  <td><input type="radio" name="sectionA_question4" value="0" /></td>
-  <td><input type="radio" name="sectionA_question4" value="1" /></td>
-  <td><input type="radio" name="sectionA_question4" value="2" /></td>
-  <td><input type="radio" name="sectionA_question4" value="3" /></td>
-  <td><input type="radio" name="sectionA_question4" value="4" /></td>
-  <td><input type="radio" name="sectionA_question4" value="5" /></td>
-  <td><input type="radio" name="sectionA_question4" value="6" /></td>
+  <td><span class="question__number">5</span><span class="question__title">Showering standing up</span></td>
+  <td><input type="radio" name="sectionA_question4" id="sectionA_question4_value0" value="0" /><label class="question__label" for="sectionA_question4_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionA_question4" id="sectionA_question4_value1" value="1" /><label class="question__label" for="sectionA_question4_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionA_question4" id="sectionA_question4_value2" value="2" /><label class="question__label" for="sectionA_question4_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionA_question4" id="sectionA_question4_value3" value="3" /><label class="question__label" for="sectionA_question4_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionA_question4" id="sectionA_question4_value4" value="4" /><label class="question__label" for="sectionA_question4_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionA_question4" id="sectionA_question4_value5" value="5" /><label class="question__label" for="sectionA_question4_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionA_question4" id="sectionA_question4_value6" value="6" /><label class="question__label" for="sectionA_question4_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <tr class="question">
-  <td>6 Getting up and staying out of bed for approx. 1 hour</td>
-  <td><input type="radio" name="sectionA_question5" value="0" /></td>
-  <td><input type="radio" name="sectionA_question5" value="1" /></td>
-  <td><input type="radio" name="sectionA_question5" value="2" /></td>
-  <td><input type="radio" name="sectionA_question5" value="3" /></td>
-  <td><input type="radio" name="sectionA_question5" value="4" /></td>
-  <td><input type="radio" name="sectionA_question5" value="5" /></td>
-  <td><input type="radio" name="sectionA_question5" value="6" /></td>
+  <td><span class="question__number">6</span><span class="question__title">Getting up and staying out of bed for approx. 1 hour</span></td>
+  <td><input type="radio" name="sectionA_question5" id="sectionA_question5_value0" value="0" /><label class="question__label" for="sectionA_question5_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionA_question5" id="sectionA_question5_value1" value="1" /><label class="question__label" for="sectionA_question5_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionA_question5" id="sectionA_question5_value2" value="2" /><label class="question__label" for="sectionA_question5_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionA_question5" id="sectionA_question5_value3" value="3" /><label class="question__label" for="sectionA_question5_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionA_question5" id="sectionA_question5_value4" value="4" /><label class="question__label" for="sectionA_question5_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionA_question5" id="sectionA_question5_value5" value="5" /><label class="question__label" for="sectionA_question5_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionA_question5" id="sectionA_question5_value6" value="6" /><label class="question__label" for="sectionA_question5_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <tr class="question">
-  <td>7 Getting dressed in regular clothes</td>
-  <td><input type="radio" name="sectionA_question6" value="0" /></td>
-  <td><input type="radio" name="sectionA_question6" value="1" /></td>
-  <td><input type="radio" name="sectionA_question6" value="2" /></td>
-  <td><input type="radio" name="sectionA_question6" value="3" /></td>
-  <td><input type="radio" name="sectionA_question6" value="4" /></td>
-  <td><input type="radio" name="sectionA_question6" value="5" /></td>
-  <td><input type="radio" name="sectionA_question6" value="6" /></td>
+  <td><span class="question__number">7</span><span class="question__title">Getting dressed in regular clothes</span></td>
+  <td><input type="radio" name="sectionA_question6" id="sectionA_question6_value0" value="0" /><label class="question__label" for="sectionA_question6_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionA_question6" id="sectionA_question6_value1" value="1" /><label class="question__label" for="sectionA_question6_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionA_question6" id="sectionA_question6_value2" value="2" /><label class="question__label" for="sectionA_question6_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionA_question6" id="sectionA_question6_value3" value="3" /><label class="question__label" for="sectionA_question6_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionA_question6" id="sectionA_question6_value4" value="4" /><label class="question__label" for="sectionA_question6_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionA_question6" id="sectionA_question6_value5" value="5" /><label class="question__label" for="sectionA_question6_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionA_question6" id="sectionA_question6_value6" value="6" /><label class="question__label" for="sectionA_question6_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <!-- TT QUESTIONS TT -->
 
@@ -135,11 +136,11 @@ A to H: Scored 0-6:<br>0: I cannot do this<br>1: My capacity will be severely re
 
   </table>
   <div class="average">Average: 0</div>
-</div>
-<div class="section" id="sectionB">
-  <h2>B Walking – moving around</h2>
+</section>
+<section class="section" id="sectionB">
+  <h2><span class="section__letter">B</span>Walking – moving around</h2>
   <table>
-    <tr>
+    <tr class="question__scoring">
       <th></th>
       <th>0</th>
       <th>1</th>
@@ -150,74 +151,74 @@ A to H: Scored 0-6:<br>0: I cannot do this<br>1: My capacity will be severely re
       <th>6</th>
     </tr>
     <tr class="question">
-  <td>8 Walking a short distance indoors, from one room to another</td>
-  <td><input type="radio" name="sectionB_question0" value="0" /></td>
-  <td><input type="radio" name="sectionB_question0" value="1" /></td>
-  <td><input type="radio" name="sectionB_question0" value="2" /></td>
-  <td><input type="radio" name="sectionB_question0" value="3" /></td>
-  <td><input type="radio" name="sectionB_question0" value="4" /></td>
-  <td><input type="radio" name="sectionB_question0" value="5" /></td>
-  <td><input type="radio" name="sectionB_question0" value="6" /></td>
+  <td><span class="question__number">8</span><span class="question__title">Walking a short distance indoors, from one room to another</span></td>
+  <td><input type="radio" name="sectionB_question0" id="sectionB_question0_value0" value="0" /><label class="question__label" for="sectionB_question0_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionB_question0" id="sectionB_question0_value1" value="1" /><label class="question__label" for="sectionB_question0_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionB_question0" id="sectionB_question0_value2" value="2" /><label class="question__label" for="sectionB_question0_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionB_question0" id="sectionB_question0_value3" value="3" /><label class="question__label" for="sectionB_question0_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionB_question0" id="sectionB_question0_value4" value="4" /><label class="question__label" for="sectionB_question0_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionB_question0" id="sectionB_question0_value5" value="5" /><label class="question__label" for="sectionB_question0_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionB_question0" id="sectionB_question0_value6" value="6" /><label class="question__label" for="sectionB_question0_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <tr class="question">
-  <td>9 Walking a short continuous distance, approx. 100 m (length of a football field), in- or outdoors</td>
-  <td><input type="radio" name="sectionB_question1" value="0" /></td>
-  <td><input type="radio" name="sectionB_question1" value="1" /></td>
-  <td><input type="radio" name="sectionB_question1" value="2" /></td>
-  <td><input type="radio" name="sectionB_question1" value="3" /></td>
-  <td><input type="radio" name="sectionB_question1" value="4" /></td>
-  <td><input type="radio" name="sectionB_question1" value="5" /></td>
-  <td><input type="radio" name="sectionB_question1" value="6" /></td>
+  <td><span class="question__number">9</span><span class="question__title">Walking a short continuous distance, approx. 100 m (length of a football field), in- or outdoors</span></td>
+  <td><input type="radio" name="sectionB_question1" id="sectionB_question1_value0" value="0" /><label class="question__label" for="sectionB_question1_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionB_question1" id="sectionB_question1_value1" value="1" /><label class="question__label" for="sectionB_question1_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionB_question1" id="sectionB_question1_value2" value="2" /><label class="question__label" for="sectionB_question1_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionB_question1" id="sectionB_question1_value3" value="3" /><label class="question__label" for="sectionB_question1_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionB_question1" id="sectionB_question1_value4" value="4" /><label class="question__label" for="sectionB_question1_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionB_question1" id="sectionB_question1_value5" value="5" /><label class="question__label" for="sectionB_question1_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionB_question1" id="sectionB_question1_value6" value="6" /><label class="question__label" for="sectionB_question1_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <tr class="question">
-  <td>10 Walking between approx. 100 m and 1 km on level ground (length of 1 to 10 football fields)</td>
-  <td><input type="radio" name="sectionB_question2" value="0" /></td>
-  <td><input type="radio" name="sectionB_question2" value="1" /></td>
-  <td><input type="radio" name="sectionB_question2" value="2" /></td>
-  <td><input type="radio" name="sectionB_question2" value="3" /></td>
-  <td><input type="radio" name="sectionB_question2" value="4" /></td>
-  <td><input type="radio" name="sectionB_question2" value="5" /></td>
-  <td><input type="radio" name="sectionB_question2" value="6" /></td>
+  <td><span class="question__number">10</span><span class="question__title">Walking between approx. 100 m and 1 km on level ground (length of 1 to 10 football fields)</span></td>
+  <td><input type="radio" name="sectionB_question2" id="sectionB_question2_value0" value="0" /><label class="question__label" for="sectionB_question2_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionB_question2" id="sectionB_question2_value1" value="1" /><label class="question__label" for="sectionB_question2_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionB_question2" id="sectionB_question2_value2" value="2" /><label class="question__label" for="sectionB_question2_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionB_question2" id="sectionB_question2_value3" value="3" /><label class="question__label" for="sectionB_question2_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionB_question2" id="sectionB_question2_value4" value="4" /><label class="question__label" for="sectionB_question2_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionB_question2" id="sectionB_question2_value5" value="5" /><label class="question__label" for="sectionB_question2_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionB_question2" id="sectionB_question2_value6" value="6" /><label class="question__label" for="sectionB_question2_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <tr class="question">
-  <td>11 Going for a longer walk. Approx. 1 km (0.6 mile), mostly level ground</td>
-  <td><input type="radio" name="sectionB_question3" value="0" /></td>
-  <td><input type="radio" name="sectionB_question3" value="1" /></td>
-  <td><input type="radio" name="sectionB_question3" value="2" /></td>
-  <td><input type="radio" name="sectionB_question3" value="3" /></td>
-  <td><input type="radio" name="sectionB_question3" value="4" /></td>
-  <td><input type="radio" name="sectionB_question3" value="5" /></td>
-  <td><input type="radio" name="sectionB_question3" value="6" /></td>
+  <td><span class="question__number">11</span><span class="question__title">Going for a longer walk. Approx. 1 km (0.6 mile), mostly level ground</span></td>
+  <td><input type="radio" name="sectionB_question3" id="sectionB_question3_value0" value="0" /><label class="question__label" for="sectionB_question3_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionB_question3" id="sectionB_question3_value1" value="1" /><label class="question__label" for="sectionB_question3_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionB_question3" id="sectionB_question3_value2" value="2" /><label class="question__label" for="sectionB_question3_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionB_question3" id="sectionB_question3_value3" value="3" /><label class="question__label" for="sectionB_question3_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionB_question3" id="sectionB_question3_value4" value="4" /><label class="question__label" for="sectionB_question3_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionB_question3" id="sectionB_question3_value5" value="5" /><label class="question__label" for="sectionB_question3_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionB_question3" id="sectionB_question3_value6" value="6" /><label class="question__label" for="sectionB_question3_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <tr class="question">
-  <td>12 Going for a longer walk. Approx. 1 km (0.6 mile), hilly or varied terrain</td>
-  <td><input type="radio" name="sectionB_question4" value="0" /></td>
-  <td><input type="radio" name="sectionB_question4" value="1" /></td>
-  <td><input type="radio" name="sectionB_question4" value="2" /></td>
-  <td><input type="radio" name="sectionB_question4" value="3" /></td>
-  <td><input type="radio" name="sectionB_question4" value="4" /></td>
-  <td><input type="radio" name="sectionB_question4" value="5" /></td>
-  <td><input type="radio" name="sectionB_question4" value="6" /></td>
+  <td><span class="question__number">12</span><span class="question__title">Going for a longer walk. Approx. 1 km (0.6 mile), hilly or varied terrain</span></td>
+  <td><input type="radio" name="sectionB_question4" id="sectionB_question4_value0" value="0" /><label class="question__label" for="sectionB_question4_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionB_question4" id="sectionB_question4_value1" value="1" /><label class="question__label" for="sectionB_question4_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionB_question4" id="sectionB_question4_value2" value="2" /><label class="question__label" for="sectionB_question4_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionB_question4" id="sectionB_question4_value3" value="3" /><label class="question__label" for="sectionB_question4_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionB_question4" id="sectionB_question4_value4" value="4" /><label class="question__label" for="sectionB_question4_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionB_question4" id="sectionB_question4_value5" value="5" /><label class="question__label" for="sectionB_question4_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionB_question4" id="sectionB_question4_value6" value="6" /><label class="question__label" for="sectionB_question4_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <tr class="question">
-  <td>13 Physical activity with increased heart rate, for approx. 15 min</td>
-  <td><input type="radio" name="sectionB_question5" value="0" /></td>
-  <td><input type="radio" name="sectionB_question5" value="1" /></td>
-  <td><input type="radio" name="sectionB_question5" value="2" /></td>
-  <td><input type="radio" name="sectionB_question5" value="3" /></td>
-  <td><input type="radio" name="sectionB_question5" value="4" /></td>
-  <td><input type="radio" name="sectionB_question5" value="5" /></td>
-  <td><input type="radio" name="sectionB_question5" value="6" /></td>
+  <td><span class="question__number">13</span><span class="question__title">Physical activity with increased heart rate, for approx. 15 min</span></td>
+  <td><input type="radio" name="sectionB_question5" id="sectionB_question5_value0" value="0" /><label class="question__label" for="sectionB_question5_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionB_question5" id="sectionB_question5_value1" value="1" /><label class="question__label" for="sectionB_question5_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionB_question5" id="sectionB_question5_value2" value="2" /><label class="question__label" for="sectionB_question5_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionB_question5" id="sectionB_question5_value3" value="3" /><label class="question__label" for="sectionB_question5_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionB_question5" id="sectionB_question5_value4" value="4" /><label class="question__label" for="sectionB_question5_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionB_question5" id="sectionB_question5_value5" value="5" /><label class="question__label" for="sectionB_question5_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionB_question5" id="sectionB_question5_value6" value="6" /><label class="question__label" for="sectionB_question5_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <tr class="question">
-  <td>14 Physical activity with increased heart rate, for approx. 1/2 hour</td>
-  <td><input type="radio" name="sectionB_question6" value="0" /></td>
-  <td><input type="radio" name="sectionB_question6" value="1" /></td>
-  <td><input type="radio" name="sectionB_question6" value="2" /></td>
-  <td><input type="radio" name="sectionB_question6" value="3" /></td>
-  <td><input type="radio" name="sectionB_question6" value="4" /></td>
-  <td><input type="radio" name="sectionB_question6" value="5" /></td>
-  <td><input type="radio" name="sectionB_question6" value="6" /></td>
+  <td><span class="question__number">14</span><span class="question__title">Physical activity with increased heart rate, for approx. 1/2 hour</span></td>
+  <td><input type="radio" name="sectionB_question6" id="sectionB_question6_value0" value="0" /><label class="question__label" for="sectionB_question6_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionB_question6" id="sectionB_question6_value1" value="1" /><label class="question__label" for="sectionB_question6_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionB_question6" id="sectionB_question6_value2" value="2" /><label class="question__label" for="sectionB_question6_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionB_question6" id="sectionB_question6_value3" value="3" /><label class="question__label" for="sectionB_question6_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionB_question6" id="sectionB_question6_value4" value="4" /><label class="question__label" for="sectionB_question6_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionB_question6" id="sectionB_question6_value5" value="5" /><label class="question__label" for="sectionB_question6_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionB_question6" id="sectionB_question6_value6" value="6" /><label class="question__label" for="sectionB_question6_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <!-- TT QUESTIONS TT -->
 
@@ -229,11 +230,11 @@ A to H: Scored 0-6:<br>0: I cannot do this<br>1: My capacity will be severely re
 
   </table>
   <div class="average">Average: 0</div>
-</div>
-<div class="section" id="sectionC">
-  <h2>C Being upright</h2>
+</section>
+<section class="section" id="sectionC">
+  <h2><span class="section__letter">C</span>Being upright</h2>
   <table>
-    <tr>
+    <tr class="question__scoring">
       <th></th>
       <th>0</th>
       <th>1</th>
@@ -244,54 +245,54 @@ A to H: Scored 0-6:<br>0: I cannot do this<br>1: My capacity will be severely re
       <th>6</th>
     </tr>
     <tr class="question">
-  <td>15 Sitting in bed for approx. 1/2 hour</td>
-  <td><input type="radio" name="sectionC_question0" value="0" /></td>
-  <td><input type="radio" name="sectionC_question0" value="1" /></td>
-  <td><input type="radio" name="sectionC_question0" value="2" /></td>
-  <td><input type="radio" name="sectionC_question0" value="3" /></td>
-  <td><input type="radio" name="sectionC_question0" value="4" /></td>
-  <td><input type="radio" name="sectionC_question0" value="5" /></td>
-  <td><input type="radio" name="sectionC_question0" value="6" /></td>
+  <td><span class="question__number">15</span><span class="question__title">Sitting in bed for approx. 1/2 hour</span></td>
+  <td><input type="radio" name="sectionC_question0" id="sectionC_question0_value0" value="0" /><label class="question__label" for="sectionC_question0_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionC_question0" id="sectionC_question0_value1" value="1" /><label class="question__label" for="sectionC_question0_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionC_question0" id="sectionC_question0_value2" value="2" /><label class="question__label" for="sectionC_question0_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionC_question0" id="sectionC_question0_value3" value="3" /><label class="question__label" for="sectionC_question0_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionC_question0" id="sectionC_question0_value4" value="4" /><label class="question__label" for="sectionC_question0_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionC_question0" id="sectionC_question0_value5" value="5" /><label class="question__label" for="sectionC_question0_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionC_question0" id="sectionC_question0_value6" value="6" /><label class="question__label" for="sectionC_question0_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <tr class="question">
-  <td>16 Sitting in an upright chair (dining chair) with feet on floor for approx. 10 minutes</td>
-  <td><input type="radio" name="sectionC_question1" value="0" /></td>
-  <td><input type="radio" name="sectionC_question1" value="1" /></td>
-  <td><input type="radio" name="sectionC_question1" value="2" /></td>
-  <td><input type="radio" name="sectionC_question1" value="3" /></td>
-  <td><input type="radio" name="sectionC_question1" value="4" /></td>
-  <td><input type="radio" name="sectionC_question1" value="5" /></td>
-  <td><input type="radio" name="sectionC_question1" value="6" /></td>
+  <td><span class="question__number">16</span><span class="question__title">Sitting in an upright chair (dining chair) with feet on floor for approx. 10 minutes</span></td>
+  <td><input type="radio" name="sectionC_question1" id="sectionC_question1_value0" value="0" /><label class="question__label" for="sectionC_question1_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionC_question1" id="sectionC_question1_value1" value="1" /><label class="question__label" for="sectionC_question1_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionC_question1" id="sectionC_question1_value2" value="2" /><label class="question__label" for="sectionC_question1_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionC_question1" id="sectionC_question1_value3" value="3" /><label class="question__label" for="sectionC_question1_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionC_question1" id="sectionC_question1_value4" value="4" /><label class="question__label" for="sectionC_question1_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionC_question1" id="sectionC_question1_value5" value="5" /><label class="question__label" for="sectionC_question1_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionC_question1" id="sectionC_question1_value6" value="6" /><label class="question__label" for="sectionC_question1_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <tr class="question">
-  <td>17 Sitting in an upright chair (dining chair) with feet on floor for approx. 2 hours</td>
-  <td><input type="radio" name="sectionC_question2" value="0" /></td>
-  <td><input type="radio" name="sectionC_question2" value="1" /></td>
-  <td><input type="radio" name="sectionC_question2" value="2" /></td>
-  <td><input type="radio" name="sectionC_question2" value="3" /></td>
-  <td><input type="radio" name="sectionC_question2" value="4" /></td>
-  <td><input type="radio" name="sectionC_question2" value="5" /></td>
-  <td><input type="radio" name="sectionC_question2" value="6" /></td>
+  <td><span class="question__number">17</span><span class="question__title">Sitting in an upright chair (dining chair) with feet on floor for approx. 2 hours</span></td>
+  <td><input type="radio" name="sectionC_question2" id="sectionC_question2_value0" value="0" /><label class="question__label" for="sectionC_question2_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionC_question2" id="sectionC_question2_value1" value="1" /><label class="question__label" for="sectionC_question2_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionC_question2" id="sectionC_question2_value2" value="2" /><label class="question__label" for="sectionC_question2_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionC_question2" id="sectionC_question2_value3" value="3" /><label class="question__label" for="sectionC_question2_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionC_question2" id="sectionC_question2_value4" value="4" /><label class="question__label" for="sectionC_question2_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionC_question2" id="sectionC_question2_value5" value="5" /><label class="question__label" for="sectionC_question2_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionC_question2" id="sectionC_question2_value6" value="6" /><label class="question__label" for="sectionC_question2_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <tr class="question">
-  <td>18 Standing up for approx. 5 minutes, e.g. while queuing or while cooking</td>
-  <td><input type="radio" name="sectionC_question3" value="0" /></td>
-  <td><input type="radio" name="sectionC_question3" value="1" /></td>
-  <td><input type="radio" name="sectionC_question3" value="2" /></td>
-  <td><input type="radio" name="sectionC_question3" value="3" /></td>
-  <td><input type="radio" name="sectionC_question3" value="4" /></td>
-  <td><input type="radio" name="sectionC_question3" value="5" /></td>
-  <td><input type="radio" name="sectionC_question3" value="6" /></td>
+  <td><span class="question__number">18</span><span class="question__title">Standing up for approx. 5 minutes, e.g. while queuing or while cooking</span></td>
+  <td><input type="radio" name="sectionC_question3" id="sectionC_question3_value0" value="0" /><label class="question__label" for="sectionC_question3_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionC_question3" id="sectionC_question3_value1" value="1" /><label class="question__label" for="sectionC_question3_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionC_question3" id="sectionC_question3_value2" value="2" /><label class="question__label" for="sectionC_question3_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionC_question3" id="sectionC_question3_value3" value="3" /><label class="question__label" for="sectionC_question3_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionC_question3" id="sectionC_question3_value4" value="4" /><label class="question__label" for="sectionC_question3_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionC_question3" id="sectionC_question3_value5" value="5" /><label class="question__label" for="sectionC_question3_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionC_question3" id="sectionC_question3_value6" value="6" /><label class="question__label" for="sectionC_question3_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <tr class="question">
-  <td>19 Standing up for a long time – approx. 1/2 hour</td>
-  <td><input type="radio" name="sectionC_question4" value="0" /></td>
-  <td><input type="radio" name="sectionC_question4" value="1" /></td>
-  <td><input type="radio" name="sectionC_question4" value="2" /></td>
-  <td><input type="radio" name="sectionC_question4" value="3" /></td>
-  <td><input type="radio" name="sectionC_question4" value="4" /></td>
-  <td><input type="radio" name="sectionC_question4" value="5" /></td>
-  <td><input type="radio" name="sectionC_question4" value="6" /></td>
+  <td><span class="question__number">19</span><span class="question__title">Standing up for a long time – approx. 1/2 hour</span></td>
+  <td><input type="radio" name="sectionC_question4" id="sectionC_question4_value0" value="0" /><label class="question__label" for="sectionC_question4_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionC_question4" id="sectionC_question4_value1" value="1" /><label class="question__label" for="sectionC_question4_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionC_question4" id="sectionC_question4_value2" value="2" /><label class="question__label" for="sectionC_question4_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionC_question4" id="sectionC_question4_value3" value="3" /><label class="question__label" for="sectionC_question4_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionC_question4" id="sectionC_question4_value4" value="4" /><label class="question__label" for="sectionC_question4_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionC_question4" id="sectionC_question4_value5" value="5" /><label class="question__label" for="sectionC_question4_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionC_question4" id="sectionC_question4_value6" value="6" /><label class="question__label" for="sectionC_question4_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <!-- TT QUESTIONS TT -->
 
@@ -301,11 +302,11 @@ A to H: Scored 0-6:<br>0: I cannot do this<br>1: My capacity will be severely re
 
   </table>
   <div class="average">Average: 0</div>
-</div>
-<div class="section" id="sectionD">
-  <h2>D Activities in the home</h2>
+</section>
+<section class="section" id="sectionD">
+  <h2><span class="section__letter">D</span>Activities in the home</h2>
   <table>
-    <tr>
+    <tr class="question__scoring">
       <th></th>
       <th>0</th>
       <th>1</th>
@@ -316,64 +317,64 @@ A to H: Scored 0-6:<br>0: I cannot do this<br>1: My capacity will be severely re
       <th>6</th>
     </tr>
     <tr class="question">
-  <td>20 Light housework (dusting, tidying etc.) for approx. 1/2 hour continuously</td>
-  <td><input type="radio" name="sectionD_question0" value="0" /></td>
-  <td><input type="radio" name="sectionD_question0" value="1" /></td>
-  <td><input type="radio" name="sectionD_question0" value="2" /></td>
-  <td><input type="radio" name="sectionD_question0" value="3" /></td>
-  <td><input type="radio" name="sectionD_question0" value="4" /></td>
-  <td><input type="radio" name="sectionD_question0" value="5" /></td>
-  <td><input type="radio" name="sectionD_question0" value="6" /></td>
+  <td><span class="question__number">20</span><span class="question__title">Light housework (dusting, tidying etc.) for approx. 1/2 hour continuously</span></td>
+  <td><input type="radio" name="sectionD_question0" id="sectionD_question0_value0" value="0" /><label class="question__label" for="sectionD_question0_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionD_question0" id="sectionD_question0_value1" value="1" /><label class="question__label" for="sectionD_question0_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionD_question0" id="sectionD_question0_value2" value="2" /><label class="question__label" for="sectionD_question0_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionD_question0" id="sectionD_question0_value3" value="3" /><label class="question__label" for="sectionD_question0_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionD_question0" id="sectionD_question0_value4" value="4" /><label class="question__label" for="sectionD_question0_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionD_question0" id="sectionD_question0_value5" value="5" /><label class="question__label" for="sectionD_question0_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionD_question0" id="sectionD_question0_value6" value="6" /><label class="question__label" for="sectionD_question0_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <tr class="question">
-  <td>21 Heavier housework (washing floors, vacuuming etc.) for approx. 1/2 hour continuously</td>
-  <td><input type="radio" name="sectionD_question1" value="0" /></td>
-  <td><input type="radio" name="sectionD_question1" value="1" /></td>
-  <td><input type="radio" name="sectionD_question1" value="2" /></td>
-  <td><input type="radio" name="sectionD_question1" value="3" /></td>
-  <td><input type="radio" name="sectionD_question1" value="4" /></td>
-  <td><input type="radio" name="sectionD_question1" value="5" /></td>
-  <td><input type="radio" name="sectionD_question1" value="6" /></td>
+  <td><span class="question__number">21</span><span class="question__title">Heavier housework (washing floors, vacuuming etc.) for approx. 1/2 hour continuously</span></td>
+  <td><input type="radio" name="sectionD_question1" id="sectionD_question1_value0" value="0" /><label class="question__label" for="sectionD_question1_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionD_question1" id="sectionD_question1_value1" value="1" /><label class="question__label" for="sectionD_question1_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionD_question1" id="sectionD_question1_value2" value="2" /><label class="question__label" for="sectionD_question1_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionD_question1" id="sectionD_question1_value3" value="3" /><label class="question__label" for="sectionD_question1_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionD_question1" id="sectionD_question1_value4" value="4" /><label class="question__label" for="sectionD_question1_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionD_question1" id="sectionD_question1_value5" value="5" /><label class="question__label" for="sectionD_question1_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionD_question1" id="sectionD_question1_value6" value="6" /><label class="question__label" for="sectionD_question1_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <tr class="question">
-  <td>22 Laundry (sorting, hanging up to dry and folding)</td>
-  <td><input type="radio" name="sectionD_question2" value="0" /></td>
-  <td><input type="radio" name="sectionD_question2" value="1" /></td>
-  <td><input type="radio" name="sectionD_question2" value="2" /></td>
-  <td><input type="radio" name="sectionD_question2" value="3" /></td>
-  <td><input type="radio" name="sectionD_question2" value="4" /></td>
-  <td><input type="radio" name="sectionD_question2" value="5" /></td>
-  <td><input type="radio" name="sectionD_question2" value="6" /></td>
+  <td><span class="question__number">22</span><span class="question__title">Laundry (sorting, hanging up to dry and folding)</span></td>
+  <td><input type="radio" name="sectionD_question2" id="sectionD_question2_value0" value="0" /><label class="question__label" for="sectionD_question2_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionD_question2" id="sectionD_question2_value1" value="1" /><label class="question__label" for="sectionD_question2_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionD_question2" id="sectionD_question2_value2" value="2" /><label class="question__label" for="sectionD_question2_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionD_question2" id="sectionD_question2_value3" value="3" /><label class="question__label" for="sectionD_question2_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionD_question2" id="sectionD_question2_value4" value="4" /><label class="question__label" for="sectionD_question2_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionD_question2" id="sectionD_question2_value5" value="5" /><label class="question__label" for="sectionD_question2_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionD_question2" id="sectionD_question2_value6" value="6" /><label class="question__label" for="sectionD_question2_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <tr class="question">
-  <td>23 Making a simple cold meal, such as a sandwich or cereal</td>
-  <td><input type="radio" name="sectionD_question3" value="0" /></td>
-  <td><input type="radio" name="sectionD_question3" value="1" /></td>
-  <td><input type="radio" name="sectionD_question3" value="2" /></td>
-  <td><input type="radio" name="sectionD_question3" value="3" /></td>
-  <td><input type="radio" name="sectionD_question3" value="4" /></td>
-  <td><input type="radio" name="sectionD_question3" value="5" /></td>
-  <td><input type="radio" name="sectionD_question3" value="6" /></td>
+  <td><span class="question__number">23</span><span class="question__title">Making a simple cold meal, such as a sandwich or cereal</span></td>
+  <td><input type="radio" name="sectionD_question3" id="sectionD_question3_value0" value="0" /><label class="question__label" for="sectionD_question3_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionD_question3" id="sectionD_question3_value1" value="1" /><label class="question__label" for="sectionD_question3_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionD_question3" id="sectionD_question3_value2" value="2" /><label class="question__label" for="sectionD_question3_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionD_question3" id="sectionD_question3_value3" value="3" /><label class="question__label" for="sectionD_question3_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionD_question3" id="sectionD_question3_value4" value="4" /><label class="question__label" for="sectionD_question3_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionD_question3" id="sectionD_question3_value5" value="5" /><label class="question__label" for="sectionD_question3_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionD_question3" id="sectionD_question3_value6" value="6" /><label class="question__label" for="sectionD_question3_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <tr class="question">
-  <td>24 Cooking a simple hot meal</td>
-  <td><input type="radio" name="sectionD_question4" value="0" /></td>
-  <td><input type="radio" name="sectionD_question4" value="1" /></td>
-  <td><input type="radio" name="sectionD_question4" value="2" /></td>
-  <td><input type="radio" name="sectionD_question4" value="3" /></td>
-  <td><input type="radio" name="sectionD_question4" value="4" /></td>
-  <td><input type="radio" name="sectionD_question4" value="5" /></td>
-  <td><input type="radio" name="sectionD_question4" value="6" /></td>
+  <td><span class="question__number">24</span><span class="question__title">Cooking a simple hot meal</span></td>
+  <td><input type="radio" name="sectionD_question4" id="sectionD_question4_value0" value="0" /><label class="question__label" for="sectionD_question4_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionD_question4" id="sectionD_question4_value1" value="1" /><label class="question__label" for="sectionD_question4_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionD_question4" id="sectionD_question4_value2" value="2" /><label class="question__label" for="sectionD_question4_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionD_question4" id="sectionD_question4_value3" value="3" /><label class="question__label" for="sectionD_question4_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionD_question4" id="sectionD_question4_value4" value="4" /><label class="question__label" for="sectionD_question4_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionD_question4" id="sectionD_question4_value5" value="5" /><label class="question__label" for="sectionD_question4_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionD_question4" id="sectionD_question4_value6" value="6" /><label class="question__label" for="sectionD_question4_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <tr class="question">
-  <td>25 Cooking a complicated meal from scratch, approx. 1 hour of preparation</td>
-  <td><input type="radio" name="sectionD_question5" value="0" /></td>
-  <td><input type="radio" name="sectionD_question5" value="1" /></td>
-  <td><input type="radio" name="sectionD_question5" value="2" /></td>
-  <td><input type="radio" name="sectionD_question5" value="3" /></td>
-  <td><input type="radio" name="sectionD_question5" value="4" /></td>
-  <td><input type="radio" name="sectionD_question5" value="5" /></td>
-  <td><input type="radio" name="sectionD_question5" value="6" /></td>
+  <td><span class="question__number">25</span><span class="question__title">Cooking a complicated meal from scratch, approx. 1 hour of preparation</span></td>
+  <td><input type="radio" name="sectionD_question5" id="sectionD_question5_value0" value="0" /><label class="question__label" for="sectionD_question5_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionD_question5" id="sectionD_question5_value1" value="1" /><label class="question__label" for="sectionD_question5_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionD_question5" id="sectionD_question5_value2" value="2" /><label class="question__label" for="sectionD_question5_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionD_question5" id="sectionD_question5_value3" value="3" /><label class="question__label" for="sectionD_question5_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionD_question5" id="sectionD_question5_value4" value="4" /><label class="question__label" for="sectionD_question5_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionD_question5" id="sectionD_question5_value5" value="5" /><label class="question__label" for="sectionD_question5_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionD_question5" id="sectionD_question5_value6" value="6" /><label class="question__label" for="sectionD_question5_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <!-- TT QUESTIONS TT -->
 
@@ -384,11 +385,11 @@ A to H: Scored 0-6:<br>0: I cannot do this<br>1: My capacity will be severely re
 
   </table>
   <div class="average">Average: 0</div>
-</div>
-<div class="section" id="sectionE">
-  <h2>E Communication</h2>
+</section>
+<section class="section" id="sectionE">
+  <h2><span class="section__letter">E</span>Communication</h2>
   <table>
-    <tr>
+    <tr class="question__scoring">
       <th></th>
       <th>0</th>
       <th>1</th>
@@ -399,168 +400,74 @@ A to H: Scored 0-6:<br>0: I cannot do this<br>1: My capacity will be severely re
       <th>6</th>
     </tr>
     <tr class="question">
-  <td>26 Speaking a few words</td>
-  <td><input type="radio" name="sectionE_question0" value="0" /></td>
-  <td><input type="radio" name="sectionE_question0" value="1" /></td>
-  <td><input type="radio" name="sectionE_question0" value="2" /></td>
-  <td><input type="radio" name="sectionE_question0" value="3" /></td>
-  <td><input type="radio" name="sectionE_question0" value="4" /></td>
-  <td><input type="radio" name="sectionE_question0" value="5" /></td>
-  <td><input type="radio" name="sectionE_question0" value="6" /></td>
+  <td><span class="question__number">26</span><span class="question__title">Speaking a few words</span></td>
+  <td><input type="radio" name="sectionE_question0" id="sectionE_question0_value0" value="0" /><label class="question__label" for="sectionE_question0_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionE_question0" id="sectionE_question0_value1" value="1" /><label class="question__label" for="sectionE_question0_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionE_question0" id="sectionE_question0_value2" value="2" /><label class="question__label" for="sectionE_question0_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionE_question0" id="sectionE_question0_value3" value="3" /><label class="question__label" for="sectionE_question0_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionE_question0" id="sectionE_question0_value4" value="4" /><label class="question__label" for="sectionE_question0_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionE_question0" id="sectionE_question0_value5" value="5" /><label class="question__label" for="sectionE_question0_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionE_question0" id="sectionE_question0_value6" value="6" /><label class="question__label" for="sectionE_question0_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <tr class="question">
-  <td>27 Having a conversation for approx. 5 minutes</td>
-  <td><input type="radio" name="sectionE_question1" value="0" /></td>
-  <td><input type="radio" name="sectionE_question1" value="1" /></td>
-  <td><input type="radio" name="sectionE_question1" value="2" /></td>
-  <td><input type="radio" name="sectionE_question1" value="3" /></td>
-  <td><input type="radio" name="sectionE_question1" value="4" /></td>
-  <td><input type="radio" name="sectionE_question1" value="5" /></td>
-  <td><input type="radio" name="sectionE_question1" value="6" /></td>
+  <td><span class="question__number">27</span><span class="question__title">Having a conversation for approx. 5 minutes</span></td>
+  <td><input type="radio" name="sectionE_question1" id="sectionE_question1_value0" value="0" /><label class="question__label" for="sectionE_question1_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionE_question1" id="sectionE_question1_value1" value="1" /><label class="question__label" for="sectionE_question1_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionE_question1" id="sectionE_question1_value2" value="2" /><label class="question__label" for="sectionE_question1_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionE_question1" id="sectionE_question1_value3" value="3" /><label class="question__label" for="sectionE_question1_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionE_question1" id="sectionE_question1_value4" value="4" /><label class="question__label" for="sectionE_question1_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionE_question1" id="sectionE_question1_value5" value="5" /><label class="question__label" for="sectionE_question1_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionE_question1" id="sectionE_question1_value6" value="6" /><label class="question__label" for="sectionE_question1_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <tr class="question">
-  <td>28 Having a conversation for approx. 1/2 hour</td>
-  <td><input type="radio" name="sectionE_question2" value="0" /></td>
-  <td><input type="radio" name="sectionE_question2" value="1" /></td>
-  <td><input type="radio" name="sectionE_question2" value="2" /></td>
-  <td><input type="radio" name="sectionE_question2" value="3" /></td>
-  <td><input type="radio" name="sectionE_question2" value="4" /></td>
-  <td><input type="radio" name="sectionE_question2" value="5" /></td>
-  <td><input type="radio" name="sectionE_question2" value="6" /></td>
+  <td><span class="question__number">28</span><span class="question__title">Having a conversation for approx. 1/2 hour</span></td>
+  <td><input type="radio" name="sectionE_question2" id="sectionE_question2_value0" value="0" /><label class="question__label" for="sectionE_question2_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionE_question2" id="sectionE_question2_value1" value="1" /><label class="question__label" for="sectionE_question2_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionE_question2" id="sectionE_question2_value2" value="2" /><label class="question__label" for="sectionE_question2_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionE_question2" id="sectionE_question2_value3" value="3" /><label class="question__label" for="sectionE_question2_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionE_question2" id="sectionE_question2_value4" value="4" /><label class="question__label" for="sectionE_question2_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionE_question2" id="sectionE_question2_value5" value="5" /><label class="question__label" for="sectionE_question2_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionE_question2" id="sectionE_question2_value6" value="6" /><label class="question__label" for="sectionE_question2_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <tr class="question">
-  <td>29 Writing a short message by hand</td>
-  <td><input type="radio" name="sectionE_question3" value="0" /></td>
-  <td><input type="radio" name="sectionE_question3" value="1" /></td>
-  <td><input type="radio" name="sectionE_question3" value="2" /></td>
-  <td><input type="radio" name="sectionE_question3" value="3" /></td>
-  <td><input type="radio" name="sectionE_question3" value="4" /></td>
-  <td><input type="radio" name="sectionE_question3" value="5" /></td>
-  <td><input type="radio" name="sectionE_question3" value="6" /></td>
+  <td><span class="question__number">29</span><span class="question__title">Writing a short message by hand</span></td>
+  <td><input type="radio" name="sectionE_question3" id="sectionE_question3_value0" value="0" /><label class="question__label" for="sectionE_question3_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionE_question3" id="sectionE_question3_value1" value="1" /><label class="question__label" for="sectionE_question3_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionE_question3" id="sectionE_question3_value2" value="2" /><label class="question__label" for="sectionE_question3_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionE_question3" id="sectionE_question3_value3" value="3" /><label class="question__label" for="sectionE_question3_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionE_question3" id="sectionE_question3_value4" value="4" /><label class="question__label" for="sectionE_question3_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionE_question3" id="sectionE_question3_value5" value="5" /><label class="question__label" for="sectionE_question3_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionE_question3" id="sectionE_question3_value6" value="6" /><label class="question__label" for="sectionE_question3_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <tr class="question">
-  <td>30 Participating in a conversation with three people for approx. 1/2 hour</td>
-  <td><input type="radio" name="sectionE_question4" value="0" /></td>
-  <td><input type="radio" name="sectionE_question4" value="1" /></td>
-  <td><input type="radio" name="sectionE_question4" value="2" /></td>
-  <td><input type="radio" name="sectionE_question4" value="3" /></td>
-  <td><input type="radio" name="sectionE_question4" value="4" /></td>
-  <td><input type="radio" name="sectionE_question4" value="5" /></td>
-  <td><input type="radio" name="sectionE_question4" value="6" /></td>
+  <td><span class="question__number">30</span><span class="question__title">Participating in a conversation with three people for approx. 1/2 hour</span></td>
+  <td><input type="radio" name="sectionE_question4" id="sectionE_question4_value0" value="0" /><label class="question__label" for="sectionE_question4_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionE_question4" id="sectionE_question4_value1" value="1" /><label class="question__label" for="sectionE_question4_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionE_question4" id="sectionE_question4_value2" value="2" /><label class="question__label" for="sectionE_question4_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionE_question4" id="sectionE_question4_value3" value="3" /><label class="question__label" for="sectionE_question4_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionE_question4" id="sectionE_question4_value4" value="4" /><label class="question__label" for="sectionE_question4_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionE_question4" id="sectionE_question4_value5" value="5" /><label class="question__label" for="sectionE_question4_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionE_question4" id="sectionE_question4_value6" value="6" /><label class="question__label" for="sectionE_question4_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <tr class="question">
-  <td>31 Socializing with friends for approx. 1 hour</td>
-  <td><input type="radio" name="sectionE_question5" value="0" /></td>
-  <td><input type="radio" name="sectionE_question5" value="1" /></td>
-  <td><input type="radio" name="sectionE_question5" value="2" /></td>
-  <td><input type="radio" name="sectionE_question5" value="3" /></td>
-  <td><input type="radio" name="sectionE_question5" value="4" /></td>
-  <td><input type="radio" name="sectionE_question5" value="5" /></td>
-  <td><input type="radio" name="sectionE_question5" value="6" /></td>
+  <td><span class="question__number">31</span><span class="question__title">Socializing with friends for approx. 1 hour</span></td>
+  <td><input type="radio" name="sectionE_question5" id="sectionE_question5_value0" value="0" /><label class="question__label" for="sectionE_question5_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionE_question5" id="sectionE_question5_value1" value="1" /><label class="question__label" for="sectionE_question5_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionE_question5" id="sectionE_question5_value2" value="2" /><label class="question__label" for="sectionE_question5_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionE_question5" id="sectionE_question5_value3" value="3" /><label class="question__label" for="sectionE_question5_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionE_question5" id="sectionE_question5_value4" value="4" /><label class="question__label" for="sectionE_question5_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionE_question5" id="sectionE_question5_value5" value="5" /><label class="question__label" for="sectionE_question5_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionE_question5" id="sectionE_question5_value6" value="6" /><label class="question__label" for="sectionE_question5_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <tr class="question">
-  <td>32 Participating in a dinner party, party or family event</td>
-  <td><input type="radio" name="sectionE_question6" value="0" /></td>
-  <td><input type="radio" name="sectionE_question6" value="1" /></td>
-  <td><input type="radio" name="sectionE_question6" value="2" /></td>
-  <td><input type="radio" name="sectionE_question6" value="3" /></td>
-  <td><input type="radio" name="sectionE_question6" value="4" /></td>
-  <td><input type="radio" name="sectionE_question6" value="5" /></td>
-  <td><input type="radio" name="sectionE_question6" value="6" /></td>
-</tr>
-<!-- TT QUESTIONS TT -->
-
-
-
-
-
-
-
-  </table>
-  <div class="average">Average: 0</div>
-</div>
-<div class="section" id="sectionF">
-  <h2>F Activities outside your home</h2>
-  <table>
-    <tr>
-      <th></th>
-      <th>0</th>
-      <th>1</th>
-      <th>2</th>
-      <th>3</th>
-      <th>4</th>
-      <th>5</th>
-      <th>6</th>
-    </tr>
-    <tr class="question">
-  <td>33 Stepping right outside your home</td>
-  <td><input type="radio" name="sectionF_question0" value="0" /></td>
-  <td><input type="radio" name="sectionF_question0" value="1" /></td>
-  <td><input type="radio" name="sectionF_question0" value="2" /></td>
-  <td><input type="radio" name="sectionF_question0" value="3" /></td>
-  <td><input type="radio" name="sectionF_question0" value="4" /></td>
-  <td><input type="radio" name="sectionF_question0" value="5" /></td>
-  <td><input type="radio" name="sectionF_question0" value="6" /></td>
-</tr>
-<tr class="question">
-  <td>34 Going on a necessary errand, such as a doctor’s appointment</td>
-  <td><input type="radio" name="sectionF_question1" value="0" /></td>
-  <td><input type="radio" name="sectionF_question1" value="1" /></td>
-  <td><input type="radio" name="sectionF_question1" value="2" /></td>
-  <td><input type="radio" name="sectionF_question1" value="3" /></td>
-  <td><input type="radio" name="sectionF_question1" value="4" /></td>
-  <td><input type="radio" name="sectionF_question1" value="5" /></td>
-  <td><input type="radio" name="sectionF_question1" value="6" /></td>
-</tr>
-<tr class="question">
-  <td>35 Going to a shop for groceries</td>
-  <td><input type="radio" name="sectionF_question2" value="0" /></td>
-  <td><input type="radio" name="sectionF_question2" value="1" /></td>
-  <td><input type="radio" name="sectionF_question2" value="2" /></td>
-  <td><input type="radio" name="sectionF_question2" value="3" /></td>
-  <td><input type="radio" name="sectionF_question2" value="4" /></td>
-  <td><input type="radio" name="sectionF_question2" value="5" /></td>
-  <td><input type="radio" name="sectionF_question2" value="6" /></td>
-</tr>
-<tr class="question">
-  <td>36 Doing enjoyable leisure activities, such as going to a café, non-essential shopping etc</td>
-  <td><input type="radio" name="sectionF_question3" value="0" /></td>
-  <td><input type="radio" name="sectionF_question3" value="1" /></td>
-  <td><input type="radio" name="sectionF_question3" value="2" /></td>
-  <td><input type="radio" name="sectionF_question3" value="3" /></td>
-  <td><input type="radio" name="sectionF_question3" value="4" /></td>
-  <td><input type="radio" name="sectionF_question3" value="5" /></td>
-  <td><input type="radio" name="sectionF_question3" value="6" /></td>
-</tr>
-<tr class="question">
-  <td>37 Riding as a passenger in a car for approx. 15 minutes</td>
-  <td><input type="radio" name="sectionF_question4" value="0" /></td>
-  <td><input type="radio" name="sectionF_question4" value="1" /></td>
-  <td><input type="radio" name="sectionF_question4" value="2" /></td>
-  <td><input type="radio" name="sectionF_question4" value="3" /></td>
-  <td><input type="radio" name="sectionF_question4" value="4" /></td>
-  <td><input type="radio" name="sectionF_question4" value="5" /></td>
-  <td><input type="radio" name="sectionF_question4" value="6" /></td>
-</tr>
-<tr class="question">
-  <td>38 Using public transport (bus or train)</td>
-  <td><input type="radio" name="sectionF_question5" value="0" /></td>
-  <td><input type="radio" name="sectionF_question5" value="1" /></td>
-  <td><input type="radio" name="sectionF_question5" value="2" /></td>
-  <td><input type="radio" name="sectionF_question5" value="3" /></td>
-  <td><input type="radio" name="sectionF_question5" value="4" /></td>
-  <td><input type="radio" name="sectionF_question5" value="5" /></td>
-  <td><input type="radio" name="sectionF_question5" value="6" /></td>
-</tr>
-<tr class="question">
-  <td>39 Participating in organized leisure activities such as classes, sports etc</td>
-  <td><input type="radio" name="sectionF_question6" value="0" /></td>
-  <td><input type="radio" name="sectionF_question6" value="1" /></td>
-  <td><input type="radio" name="sectionF_question6" value="2" /></td>
-  <td><input type="radio" name="sectionF_question6" value="3" /></td>
-  <td><input type="radio" name="sectionF_question6" value="4" /></td>
-  <td><input type="radio" name="sectionF_question6" value="5" /></td>
-  <td><input type="radio" name="sectionF_question6" value="6" /></td>
+  <td><span class="question__number">32</span><span class="question__title">Participating in a dinner party, party or family event</span></td>
+  <td><input type="radio" name="sectionE_question6" id="sectionE_question6_value0" value="0" /><label class="question__label" for="sectionE_question6_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionE_question6" id="sectionE_question6_value1" value="1" /><label class="question__label" for="sectionE_question6_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionE_question6" id="sectionE_question6_value2" value="2" /><label class="question__label" for="sectionE_question6_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionE_question6" id="sectionE_question6_value3" value="3" /><label class="question__label" for="sectionE_question6_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionE_question6" id="sectionE_question6_value4" value="4" /><label class="question__label" for="sectionE_question6_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionE_question6" id="sectionE_question6_value5" value="5" /><label class="question__label" for="sectionE_question6_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionE_question6" id="sectionE_question6_value6" value="6" /><label class="question__label" for="sectionE_question6_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <!-- TT QUESTIONS TT -->
 
@@ -572,11 +479,11 @@ A to H: Scored 0-6:<br>0: I cannot do this<br>1: My capacity will be severely re
 
   </table>
   <div class="average">Average: 0</div>
-</div>
-<div class="section" id="sectionG">
-  <h2>G Reactions to light and sound</h2>
+</section>
+<section class="section" id="sectionF">
+  <h2><span class="section__letter">F</span>Activities outside your home</h2>
   <table>
-    <tr>
+    <tr class="question__scoring">
       <th></th>
       <th>0</th>
       <th>1</th>
@@ -587,64 +494,74 @@ A to H: Scored 0-6:<br>0: I cannot do this<br>1: My capacity will be severely re
       <th>6</th>
     </tr>
     <tr class="question">
-  <td>40 Staying in a room with dim lighting for approx. 1/2 hour</td>
-  <td><input type="radio" name="sectionG_question0" value="0" /></td>
-  <td><input type="radio" name="sectionG_question0" value="1" /></td>
-  <td><input type="radio" name="sectionG_question0" value="2" /></td>
-  <td><input type="radio" name="sectionG_question0" value="3" /></td>
-  <td><input type="radio" name="sectionG_question0" value="4" /></td>
-  <td><input type="radio" name="sectionG_question0" value="5" /></td>
-  <td><input type="radio" name="sectionG_question0" value="6" /></td>
+  <td><span class="question__number">33</span><span class="question__title">Stepping right outside your home</span></td>
+  <td><input type="radio" name="sectionF_question0" id="sectionF_question0_value0" value="0" /><label class="question__label" for="sectionF_question0_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionF_question0" id="sectionF_question0_value1" value="1" /><label class="question__label" for="sectionF_question0_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionF_question0" id="sectionF_question0_value2" value="2" /><label class="question__label" for="sectionF_question0_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionF_question0" id="sectionF_question0_value3" value="3" /><label class="question__label" for="sectionF_question0_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionF_question0" id="sectionF_question0_value4" value="4" /><label class="question__label" for="sectionF_question0_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionF_question0" id="sectionF_question0_value5" value="5" /><label class="question__label" for="sectionF_question0_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionF_question0" id="sectionF_question0_value6" value="6" /><label class="question__label" for="sectionF_question0_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <tr class="question">
-  <td>41 Staying in a room with normal lighting, without sunglasses, for approx. 1 hour</td>
-  <td><input type="radio" name="sectionG_question1" value="0" /></td>
-  <td><input type="radio" name="sectionG_question1" value="1" /></td>
-  <td><input type="radio" name="sectionG_question1" value="2" /></td>
-  <td><input type="radio" name="sectionG_question1" value="3" /></td>
-  <td><input type="radio" name="sectionG_question1" value="4" /></td>
-  <td><input type="radio" name="sectionG_question1" value="5" /></td>
-  <td><input type="radio" name="sectionG_question1" value="6" /></td>
+  <td><span class="question__number">34</span><span class="question__title">Going on a necessary errand, such as a doctor’s appointment</span></td>
+  <td><input type="radio" name="sectionF_question1" id="sectionF_question1_value0" value="0" /><label class="question__label" for="sectionF_question1_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionF_question1" id="sectionF_question1_value1" value="1" /><label class="question__label" for="sectionF_question1_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionF_question1" id="sectionF_question1_value2" value="2" /><label class="question__label" for="sectionF_question1_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionF_question1" id="sectionF_question1_value3" value="3" /><label class="question__label" for="sectionF_question1_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionF_question1" id="sectionF_question1_value4" value="4" /><label class="question__label" for="sectionF_question1_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionF_question1" id="sectionF_question1_value5" value="5" /><label class="question__label" for="sectionF_question1_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionF_question1" id="sectionF_question1_value6" value="6" /><label class="question__label" for="sectionF_question1_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <tr class="question">
-  <td>42 Staying outdoors in daylight without sunglasses for approx. 2 hours</td>
-  <td><input type="radio" name="sectionG_question2" value="0" /></td>
-  <td><input type="radio" name="sectionG_question2" value="1" /></td>
-  <td><input type="radio" name="sectionG_question2" value="2" /></td>
-  <td><input type="radio" name="sectionG_question2" value="3" /></td>
-  <td><input type="radio" name="sectionG_question2" value="4" /></td>
-  <td><input type="radio" name="sectionG_question2" value="5" /></td>
-  <td><input type="radio" name="sectionG_question2" value="6" /></td>
+  <td><span class="question__number">35</span><span class="question__title">Going to a shop for groceries</span></td>
+  <td><input type="radio" name="sectionF_question2" id="sectionF_question2_value0" value="0" /><label class="question__label" for="sectionF_question2_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionF_question2" id="sectionF_question2_value1" value="1" /><label class="question__label" for="sectionF_question2_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionF_question2" id="sectionF_question2_value2" value="2" /><label class="question__label" for="sectionF_question2_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionF_question2" id="sectionF_question2_value3" value="3" /><label class="question__label" for="sectionF_question2_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionF_question2" id="sectionF_question2_value4" value="4" /><label class="question__label" for="sectionF_question2_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionF_question2" id="sectionF_question2_value5" value="5" /><label class="question__label" for="sectionF_question2_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionF_question2" id="sectionF_question2_value6" value="6" /><label class="question__label" for="sectionF_question2_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <tr class="question">
-  <td>43 Staying in an environment with the sound of a few people in quiet conversation for approx. 1 hour</td>
-  <td><input type="radio" name="sectionG_question3" value="0" /></td>
-  <td><input type="radio" name="sectionG_question3" value="1" /></td>
-  <td><input type="radio" name="sectionG_question3" value="2" /></td>
-  <td><input type="radio" name="sectionG_question3" value="3" /></td>
-  <td><input type="radio" name="sectionG_question3" value="4" /></td>
-  <td><input type="radio" name="sectionG_question3" value="5" /></td>
-  <td><input type="radio" name="sectionG_question3" value="6" /></td>
+  <td><span class="question__number">36</span><span class="question__title">Doing enjoyable leisure activities, such as going to a café, non-essential shopping etc</span></td>
+  <td><input type="radio" name="sectionF_question3" id="sectionF_question3_value0" value="0" /><label class="question__label" for="sectionF_question3_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionF_question3" id="sectionF_question3_value1" value="1" /><label class="question__label" for="sectionF_question3_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionF_question3" id="sectionF_question3_value2" value="2" /><label class="question__label" for="sectionF_question3_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionF_question3" id="sectionF_question3_value3" value="3" /><label class="question__label" for="sectionF_question3_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionF_question3" id="sectionF_question3_value4" value="4" /><label class="question__label" for="sectionF_question3_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionF_question3" id="sectionF_question3_value5" value="5" /><label class="question__label" for="sectionF_question3_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionF_question3" id="sectionF_question3_value6" value="6" /><label class="question__label" for="sectionF_question3_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <tr class="question">
-  <td>44 Staying in a noisy environment, (shopping mall, café or open plan office) for approx. 1 hour</td>
-  <td><input type="radio" name="sectionG_question4" value="0" /></td>
-  <td><input type="radio" name="sectionG_question4" value="1" /></td>
-  <td><input type="radio" name="sectionG_question4" value="2" /></td>
-  <td><input type="radio" name="sectionG_question4" value="3" /></td>
-  <td><input type="radio" name="sectionG_question4" value="4" /></td>
-  <td><input type="radio" name="sectionG_question4" value="5" /></td>
-  <td><input type="radio" name="sectionG_question4" value="6" /></td>
+  <td><span class="question__number">37</span><span class="question__title">Riding as a passenger in a car for approx. 15 minutes</span></td>
+  <td><input type="radio" name="sectionF_question4" id="sectionF_question4_value0" value="0" /><label class="question__label" for="sectionF_question4_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionF_question4" id="sectionF_question4_value1" value="1" /><label class="question__label" for="sectionF_question4_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionF_question4" id="sectionF_question4_value2" value="2" /><label class="question__label" for="sectionF_question4_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionF_question4" id="sectionF_question4_value3" value="3" /><label class="question__label" for="sectionF_question4_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionF_question4" id="sectionF_question4_value4" value="4" /><label class="question__label" for="sectionF_question4_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionF_question4" id="sectionF_question4_value5" value="5" /><label class="question__label" for="sectionF_question4_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionF_question4" id="sectionF_question4_value6" value="6" /><label class="question__label" for="sectionF_question4_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <tr class="question">
-  <td>45 Going to a cinema, concert etc. with high noise levels</td>
-  <td><input type="radio" name="sectionG_question5" value="0" /></td>
-  <td><input type="radio" name="sectionG_question5" value="1" /></td>
-  <td><input type="radio" name="sectionG_question5" value="2" /></td>
-  <td><input type="radio" name="sectionG_question5" value="3" /></td>
-  <td><input type="radio" name="sectionG_question5" value="4" /></td>
-  <td><input type="radio" name="sectionG_question5" value="5" /></td>
-  <td><input type="radio" name="sectionG_question5" value="6" /></td>
+  <td><span class="question__number">38</span><span class="question__title">Using public transport (bus or train)</span></td>
+  <td><input type="radio" name="sectionF_question5" id="sectionF_question5_value0" value="0" /><label class="question__label" for="sectionF_question5_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionF_question5" id="sectionF_question5_value1" value="1" /><label class="question__label" for="sectionF_question5_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionF_question5" id="sectionF_question5_value2" value="2" /><label class="question__label" for="sectionF_question5_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionF_question5" id="sectionF_question5_value3" value="3" /><label class="question__label" for="sectionF_question5_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionF_question5" id="sectionF_question5_value4" value="4" /><label class="question__label" for="sectionF_question5_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionF_question5" id="sectionF_question5_value5" value="5" /><label class="question__label" for="sectionF_question5_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionF_question5" id="sectionF_question5_value6" value="6" /><label class="question__label" for="sectionF_question5_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
+</tr>
+<tr class="question">
+  <td><span class="question__number">39</span><span class="question__title">Participating in organized leisure activities such as classes, sports etc</span></td>
+  <td><input type="radio" name="sectionF_question6" id="sectionF_question6_value0" value="0" /><label class="question__label" for="sectionF_question6_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionF_question6" id="sectionF_question6_value1" value="1" /><label class="question__label" for="sectionF_question6_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionF_question6" id="sectionF_question6_value2" value="2" /><label class="question__label" for="sectionF_question6_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionF_question6" id="sectionF_question6_value3" value="3" /><label class="question__label" for="sectionF_question6_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionF_question6" id="sectionF_question6_value4" value="4" /><label class="question__label" for="sectionF_question6_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionF_question6" id="sectionF_question6_value5" value="5" /><label class="question__label" for="sectionF_question6_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionF_question6" id="sectionF_question6_value6" value="6" /><label class="question__label" for="sectionF_question6_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <!-- TT QUESTIONS TT -->
 
@@ -653,13 +570,14 @@ A to H: Scored 0-6:<br>0: I cannot do this<br>1: My capacity will be severely re
 
 
 
+
   </table>
   <div class="average">Average: 0</div>
-</div>
-<div class="section" id="sectionH">
-  <h2>H Concentration</h2>
+</section>
+<section class="section" id="sectionG">
+  <h2><span class="section__letter">G</span>Reactions to light and sound</h2>
   <table>
-    <tr>
+    <tr class="question__scoring">
       <th></th>
       <th>0</th>
       <th>1</th>
@@ -670,104 +588,187 @@ A to H: Scored 0-6:<br>0: I cannot do this<br>1: My capacity will be severely re
       <th>6</th>
     </tr>
     <tr class="question">
-  <td>46 Reading a short text, such as a mobile phone text message</td>
-  <td><input type="radio" name="sectionH_question0" value="0" /></td>
-  <td><input type="radio" name="sectionH_question0" value="1" /></td>
-  <td><input type="radio" name="sectionH_question0" value="2" /></td>
-  <td><input type="radio" name="sectionH_question0" value="3" /></td>
-  <td><input type="radio" name="sectionH_question0" value="4" /></td>
-  <td><input type="radio" name="sectionH_question0" value="5" /></td>
-  <td><input type="radio" name="sectionH_question0" value="6" /></td>
+  <td><span class="question__number">40</span><span class="question__title">Staying in a room with dim lighting for approx. 1/2 hour</span></td>
+  <td><input type="radio" name="sectionG_question0" id="sectionG_question0_value0" value="0" /><label class="question__label" for="sectionG_question0_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionG_question0" id="sectionG_question0_value1" value="1" /><label class="question__label" for="sectionG_question0_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionG_question0" id="sectionG_question0_value2" value="2" /><label class="question__label" for="sectionG_question0_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionG_question0" id="sectionG_question0_value3" value="3" /><label class="question__label" for="sectionG_question0_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionG_question0" id="sectionG_question0_value4" value="4" /><label class="question__label" for="sectionG_question0_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionG_question0" id="sectionG_question0_value5" value="5" /><label class="question__label" for="sectionG_question0_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionG_question0" id="sectionG_question0_value6" value="6" /><label class="question__label" for="sectionG_question0_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <tr class="question">
-  <td>47 Reading fiction/light reading</td>
-  <td><input type="radio" name="sectionH_question1" value="0" /></td>
-  <td><input type="radio" name="sectionH_question1" value="1" /></td>
-  <td><input type="radio" name="sectionH_question1" value="2" /></td>
-  <td><input type="radio" name="sectionH_question1" value="3" /></td>
-  <td><input type="radio" name="sectionH_question1" value="4" /></td>
-  <td><input type="radio" name="sectionH_question1" value="5" /></td>
-  <td><input type="radio" name="sectionH_question1" value="6" /></td>
+  <td><span class="question__number">41</span><span class="question__title">Staying in a room with normal lighting, without sunglasses, for approx. 1 hour</span></td>
+  <td><input type="radio" name="sectionG_question1" id="sectionG_question1_value0" value="0" /><label class="question__label" for="sectionG_question1_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionG_question1" id="sectionG_question1_value1" value="1" /><label class="question__label" for="sectionG_question1_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionG_question1" id="sectionG_question1_value2" value="2" /><label class="question__label" for="sectionG_question1_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionG_question1" id="sectionG_question1_value3" value="3" /><label class="question__label" for="sectionG_question1_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionG_question1" id="sectionG_question1_value4" value="4" /><label class="question__label" for="sectionG_question1_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionG_question1" id="sectionG_question1_value5" value="5" /><label class="question__label" for="sectionG_question1_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionG_question1" id="sectionG_question1_value6" value="6" /><label class="question__label" for="sectionG_question1_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <tr class="question">
-  <td>48 Reading and understanding a non-fiction text, such as an official document one A4 page long</td>
-  <td><input type="radio" name="sectionH_question2" value="0" /></td>
-  <td><input type="radio" name="sectionH_question2" value="1" /></td>
-  <td><input type="radio" name="sectionH_question2" value="2" /></td>
-  <td><input type="radio" name="sectionH_question2" value="3" /></td>
-  <td><input type="radio" name="sectionH_question2" value="4" /></td>
-  <td><input type="radio" name="sectionH_question2" value="5" /></td>
-  <td><input type="radio" name="sectionH_question2" value="6" /></td>
+  <td><span class="question__number">42</span><span class="question__title">Staying outdoors in daylight without sunglasses for approx. 2 hours</span></td>
+  <td><input type="radio" name="sectionG_question2" id="sectionG_question2_value0" value="0" /><label class="question__label" for="sectionG_question2_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionG_question2" id="sectionG_question2_value1" value="1" /><label class="question__label" for="sectionG_question2_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionG_question2" id="sectionG_question2_value2" value="2" /><label class="question__label" for="sectionG_question2_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionG_question2" id="sectionG_question2_value3" value="3" /><label class="question__label" for="sectionG_question2_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionG_question2" id="sectionG_question2_value4" value="4" /><label class="question__label" for="sectionG_question2_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionG_question2" id="sectionG_question2_value5" value="5" /><label class="question__label" for="sectionG_question2_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionG_question2" id="sectionG_question2_value6" value="6" /><label class="question__label" for="sectionG_question2_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <tr class="question">
-  <td>49 Performing simple mental arithmetic</td>
-  <td><input type="radio" name="sectionH_question3" value="0" /></td>
-  <td><input type="radio" name="sectionH_question3" value="1" /></td>
-  <td><input type="radio" name="sectionH_question3" value="2" /></td>
-  <td><input type="radio" name="sectionH_question3" value="3" /></td>
-  <td><input type="radio" name="sectionH_question3" value="4" /></td>
-  <td><input type="radio" name="sectionH_question3" value="5" /></td>
-  <td><input type="radio" name="sectionH_question3" value="6" /></td>
+  <td><span class="question__number">43</span><span class="question__title">Staying in an environment with the sound of a few people in quiet conversation for approx. 1 hour</span></td>
+  <td><input type="radio" name="sectionG_question3" id="sectionG_question3_value0" value="0" /><label class="question__label" for="sectionG_question3_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionG_question3" id="sectionG_question3_value1" value="1" /><label class="question__label" for="sectionG_question3_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionG_question3" id="sectionG_question3_value2" value="2" /><label class="question__label" for="sectionG_question3_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionG_question3" id="sectionG_question3_value3" value="3" /><label class="question__label" for="sectionG_question3_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionG_question3" id="sectionG_question3_value4" value="4" /><label class="question__label" for="sectionG_question3_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionG_question3" id="sectionG_question3_value5" value="5" /><label class="question__label" for="sectionG_question3_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionG_question3" id="sectionG_question3_value6" value="6" /><label class="question__label" for="sectionG_question3_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <tr class="question">
-  <td>50 Writing short messages on a smartphone or tablet</td>
-  <td><input type="radio" name="sectionH_question4" value="0" /></td>
-  <td><input type="radio" name="sectionH_question4" value="1" /></td>
-  <td><input type="radio" name="sectionH_question4" value="2" /></td>
-  <td><input type="radio" name="sectionH_question4" value="3" /></td>
-  <td><input type="radio" name="sectionH_question4" value="4" /></td>
-  <td><input type="radio" name="sectionH_question4" value="5" /></td>
-  <td><input type="radio" name="sectionH_question4" value="6" /></td>
+  <td><span class="question__number">44</span><span class="question__title">Staying in a noisy environment, (shopping mall, café or open plan office) for approx. 1 hour</span></td>
+  <td><input type="radio" name="sectionG_question4" id="sectionG_question4_value0" value="0" /><label class="question__label" for="sectionG_question4_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionG_question4" id="sectionG_question4_value1" value="1" /><label class="question__label" for="sectionG_question4_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionG_question4" id="sectionG_question4_value2" value="2" /><label class="question__label" for="sectionG_question4_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionG_question4" id="sectionG_question4_value3" value="3" /><label class="question__label" for="sectionG_question4_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionG_question4" id="sectionG_question4_value4" value="4" /><label class="question__label" for="sectionG_question4_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionG_question4" id="sectionG_question4_value5" value="5" /><label class="question__label" for="sectionG_question4_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionG_question4" id="sectionG_question4_value6" value="6" /><label class="question__label" for="sectionG_question4_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <tr class="question">
-  <td>51 Using social media to stay in touch with others</td>
-  <td><input type="radio" name="sectionH_question5" value="0" /></td>
-  <td><input type="radio" name="sectionH_question5" value="1" /></td>
-  <td><input type="radio" name="sectionH_question5" value="2" /></td>
-  <td><input type="radio" name="sectionH_question5" value="3" /></td>
-  <td><input type="radio" name="sectionH_question5" value="4" /></td>
-  <td><input type="radio" name="sectionH_question5" value="5" /></td>
-  <td><input type="radio" name="sectionH_question5" value="6" /></td>
+  <td><span class="question__number">45</span><span class="question__title">Going to a cinema, concert etc. with high noise levels</span></td>
+  <td><input type="radio" name="sectionG_question5" id="sectionG_question5_value0" value="0" /><label class="question__label" for="sectionG_question5_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionG_question5" id="sectionG_question5_value1" value="1" /><label class="question__label" for="sectionG_question5_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionG_question5" id="sectionG_question5_value2" value="2" /><label class="question__label" for="sectionG_question5_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionG_question5" id="sectionG_question5_value3" value="3" /><label class="question__label" for="sectionG_question5_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionG_question5" id="sectionG_question5_value4" value="4" /><label class="question__label" for="sectionG_question5_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionG_question5" id="sectionG_question5_value5" value="5" /><label class="question__label" for="sectionG_question5_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionG_question5" id="sectionG_question5_value6" value="6" /><label class="question__label" for="sectionG_question5_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
+</tr>
+<!-- TT QUESTIONS TT -->
+
+
+
+
+
+
+  </table>
+  <div class="average">Average: 0</div>
+</section>
+<section class="section" id="sectionH">
+  <h2><span class="section__letter">H</span>Concentration</h2>
+  <table>
+    <tr class="question__scoring">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+    </tr>
+    <tr class="question">
+  <td><span class="question__number">46</span><span class="question__title">Reading a short text, such as a mobile phone text message</span></td>
+  <td><input type="radio" name="sectionH_question0" id="sectionH_question0_value0" value="0" /><label class="question__label" for="sectionH_question0_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionH_question0" id="sectionH_question0_value1" value="1" /><label class="question__label" for="sectionH_question0_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionH_question0" id="sectionH_question0_value2" value="2" /><label class="question__label" for="sectionH_question0_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionH_question0" id="sectionH_question0_value3" value="3" /><label class="question__label" for="sectionH_question0_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionH_question0" id="sectionH_question0_value4" value="4" /><label class="question__label" for="sectionH_question0_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionH_question0" id="sectionH_question0_value5" value="5" /><label class="question__label" for="sectionH_question0_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionH_question0" id="sectionH_question0_value6" value="6" /><label class="question__label" for="sectionH_question0_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <tr class="question">
-  <td>52 Watching TV (series, news)</td>
-  <td><input type="radio" name="sectionH_question6" value="0" /></td>
-  <td><input type="radio" name="sectionH_question6" value="1" /></td>
-  <td><input type="radio" name="sectionH_question6" value="2" /></td>
-  <td><input type="radio" name="sectionH_question6" value="3" /></td>
-  <td><input type="radio" name="sectionH_question6" value="4" /></td>
-  <td><input type="radio" name="sectionH_question6" value="5" /></td>
-  <td><input type="radio" name="sectionH_question6" value="6" /></td>
+  <td><span class="question__number">47</span><span class="question__title">Reading fiction/light reading</span></td>
+  <td><input type="radio" name="sectionH_question1" id="sectionH_question1_value0" value="0" /><label class="question__label" for="sectionH_question1_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionH_question1" id="sectionH_question1_value1" value="1" /><label class="question__label" for="sectionH_question1_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionH_question1" id="sectionH_question1_value2" value="2" /><label class="question__label" for="sectionH_question1_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionH_question1" id="sectionH_question1_value3" value="3" /><label class="question__label" for="sectionH_question1_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionH_question1" id="sectionH_question1_value4" value="4" /><label class="question__label" for="sectionH_question1_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionH_question1" id="sectionH_question1_value5" value="5" /><label class="question__label" for="sectionH_question1_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionH_question1" id="sectionH_question1_value6" value="6" /><label class="question__label" for="sectionH_question1_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <tr class="question">
-  <td>53 Focusing on a task for approx. 10 minutes continuously</td>
-  <td><input type="radio" name="sectionH_question7" value="0" /></td>
-  <td><input type="radio" name="sectionH_question7" value="1" /></td>
-  <td><input type="radio" name="sectionH_question7" value="2" /></td>
-  <td><input type="radio" name="sectionH_question7" value="3" /></td>
-  <td><input type="radio" name="sectionH_question7" value="4" /></td>
-  <td><input type="radio" name="sectionH_question7" value="5" /></td>
-  <td><input type="radio" name="sectionH_question7" value="6" /></td>
+  <td><span class="question__number">48</span><span class="question__title">Reading and understanding a non-fiction text, such as an official document one A4 page long</span></td>
+  <td><input type="radio" name="sectionH_question2" id="sectionH_question2_value0" value="0" /><label class="question__label" for="sectionH_question2_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionH_question2" id="sectionH_question2_value1" value="1" /><label class="question__label" for="sectionH_question2_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionH_question2" id="sectionH_question2_value2" value="2" /><label class="question__label" for="sectionH_question2_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionH_question2" id="sectionH_question2_value3" value="3" /><label class="question__label" for="sectionH_question2_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionH_question2" id="sectionH_question2_value4" value="4" /><label class="question__label" for="sectionH_question2_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionH_question2" id="sectionH_question2_value5" value="5" /><label class="question__label" for="sectionH_question2_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionH_question2" id="sectionH_question2_value6" value="6" /><label class="question__label" for="sectionH_question2_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <tr class="question">
-  <td>54 Focusing on a task for approx. 2 hours continuously</td>
-  <td><input type="radio" name="sectionH_question8" value="0" /></td>
-  <td><input type="radio" name="sectionH_question8" value="1" /></td>
-  <td><input type="radio" name="sectionH_question8" value="2" /></td>
-  <td><input type="radio" name="sectionH_question8" value="3" /></td>
-  <td><input type="radio" name="sectionH_question8" value="4" /></td>
-  <td><input type="radio" name="sectionH_question8" value="5" /></td>
-  <td><input type="radio" name="sectionH_question8" value="6" /></td>
+  <td><span class="question__number">49</span><span class="question__title">Performing simple mental arithmetic</span></td>
+  <td><input type="radio" name="sectionH_question3" id="sectionH_question3_value0" value="0" /><label class="question__label" for="sectionH_question3_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionH_question3" id="sectionH_question3_value1" value="1" /><label class="question__label" for="sectionH_question3_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionH_question3" id="sectionH_question3_value2" value="2" /><label class="question__label" for="sectionH_question3_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionH_question3" id="sectionH_question3_value3" value="3" /><label class="question__label" for="sectionH_question3_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionH_question3" id="sectionH_question3_value4" value="4" /><label class="question__label" for="sectionH_question3_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionH_question3" id="sectionH_question3_value5" value="5" /><label class="question__label" for="sectionH_question3_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionH_question3" id="sectionH_question3_value6" value="6" /><label class="question__label" for="sectionH_question3_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <tr class="question">
-  <td>55 Managing a full working day (non-physical work such as office work, classes or lectures)</td>
-  <td><input type="radio" name="sectionH_question9" value="0" /></td>
-  <td><input type="radio" name="sectionH_question9" value="1" /></td>
-  <td><input type="radio" name="sectionH_question9" value="2" /></td>
-  <td><input type="radio" name="sectionH_question9" value="3" /></td>
-  <td><input type="radio" name="sectionH_question9" value="4" /></td>
-  <td><input type="radio" name="sectionH_question9" value="5" /></td>
-  <td><input type="radio" name="sectionH_question9" value="6" /></td>
+  <td><span class="question__number">50</span><span class="question__title">Writing short messages on a smartphone or tablet</span></td>
+  <td><input type="radio" name="sectionH_question4" id="sectionH_question4_value0" value="0" /><label class="question__label" for="sectionH_question4_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionH_question4" id="sectionH_question4_value1" value="1" /><label class="question__label" for="sectionH_question4_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionH_question4" id="sectionH_question4_value2" value="2" /><label class="question__label" for="sectionH_question4_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionH_question4" id="sectionH_question4_value3" value="3" /><label class="question__label" for="sectionH_question4_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionH_question4" id="sectionH_question4_value4" value="4" /><label class="question__label" for="sectionH_question4_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionH_question4" id="sectionH_question4_value5" value="5" /><label class="question__label" for="sectionH_question4_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionH_question4" id="sectionH_question4_value6" value="6" /><label class="question__label" for="sectionH_question4_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
+</tr>
+<tr class="question">
+  <td><span class="question__number">51</span><span class="question__title">Using social media to stay in touch with others</span></td>
+  <td><input type="radio" name="sectionH_question5" id="sectionH_question5_value0" value="0" /><label class="question__label" for="sectionH_question5_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionH_question5" id="sectionH_question5_value1" value="1" /><label class="question__label" for="sectionH_question5_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionH_question5" id="sectionH_question5_value2" value="2" /><label class="question__label" for="sectionH_question5_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionH_question5" id="sectionH_question5_value3" value="3" /><label class="question__label" for="sectionH_question5_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionH_question5" id="sectionH_question5_value4" value="4" /><label class="question__label" for="sectionH_question5_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionH_question5" id="sectionH_question5_value5" value="5" /><label class="question__label" for="sectionH_question5_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionH_question5" id="sectionH_question5_value6" value="6" /><label class="question__label" for="sectionH_question5_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
+</tr>
+<tr class="question">
+  <td><span class="question__number">52</span><span class="question__title">Watching TV (series, news)</span></td>
+  <td><input type="radio" name="sectionH_question6" id="sectionH_question6_value0" value="0" /><label class="question__label" for="sectionH_question6_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionH_question6" id="sectionH_question6_value1" value="1" /><label class="question__label" for="sectionH_question6_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionH_question6" id="sectionH_question6_value2" value="2" /><label class="question__label" for="sectionH_question6_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionH_question6" id="sectionH_question6_value3" value="3" /><label class="question__label" for="sectionH_question6_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionH_question6" id="sectionH_question6_value4" value="4" /><label class="question__label" for="sectionH_question6_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionH_question6" id="sectionH_question6_value5" value="5" /><label class="question__label" for="sectionH_question6_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionH_question6" id="sectionH_question6_value6" value="6" /><label class="question__label" for="sectionH_question6_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
+</tr>
+<tr class="question">
+  <td><span class="question__number">53</span><span class="question__title">Focusing on a task for approx. 10 minutes continuously</span></td>
+  <td><input type="radio" name="sectionH_question7" id="sectionH_question7_value0" value="0" /><label class="question__label" for="sectionH_question7_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionH_question7" id="sectionH_question7_value1" value="1" /><label class="question__label" for="sectionH_question7_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionH_question7" id="sectionH_question7_value2" value="2" /><label class="question__label" for="sectionH_question7_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionH_question7" id="sectionH_question7_value3" value="3" /><label class="question__label" for="sectionH_question7_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionH_question7" id="sectionH_question7_value4" value="4" /><label class="question__label" for="sectionH_question7_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionH_question7" id="sectionH_question7_value5" value="5" /><label class="question__label" for="sectionH_question7_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionH_question7" id="sectionH_question7_value6" value="6" /><label class="question__label" for="sectionH_question7_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
+</tr>
+<tr class="question">
+  <td><span class="question__number">54</span><span class="question__title">Focusing on a task for approx. 2 hours continuously</span></td>
+  <td><input type="radio" name="sectionH_question8" id="sectionH_question8_value0" value="0" /><label class="question__label" for="sectionH_question8_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionH_question8" id="sectionH_question8_value1" value="1" /><label class="question__label" for="sectionH_question8_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionH_question8" id="sectionH_question8_value2" value="2" /><label class="question__label" for="sectionH_question8_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionH_question8" id="sectionH_question8_value3" value="3" /><label class="question__label" for="sectionH_question8_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionH_question8" id="sectionH_question8_value4" value="4" /><label class="question__label" for="sectionH_question8_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionH_question8" id="sectionH_question8_value5" value="5" /><label class="question__label" for="sectionH_question8_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionH_question8" id="sectionH_question8_value6" value="6" /><label class="question__label" for="sectionH_question8_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
+</tr>
+<tr class="question">
+  <td><span class="question__number">55</span><span class="question__title">Managing a full working day (non-physical work such as office work, classes or lectures)</span></td>
+  <td><input type="radio" name="sectionH_question9" id="sectionH_question9_value0" value="0" /><label class="question__label" for="sectionH_question9_value0"><b>0</b> I cannot do this</label></td>
+  <td><input type="radio" name="sectionH_question9" id="sectionH_question9_value1" value="1" /><label class="question__label" for="sectionH_question9_value1"><b>1</b> My capacity will be severely reduced for at least three days</label></td>
+  <td><input type="radio" name="sectionH_question9" id="sectionH_question9_value2" value="2" /><label class="question__label" for="sectionH_question9_value2"><b>2</b> I can do little else on the same day and for one to two days afterwards</label></td>
+  <td><input type="radio" name="sectionH_question9" id="sectionH_question9_value3" value="3" /><label class="question__label" for="sectionH_question9_value3"><b>3</b> I can do little else on the same day</label></td>
+  <td><input type="radio" name="sectionH_question9" id="sectionH_question9_value4" value="4" /><label class="question__label" for="sectionH_question9_value4"><b>4</b> I must limit other activities on the same day</label></td>
+  <td><input type="radio" name="sectionH_question9" id="sectionH_question9_value5" value="5" /><label class="question__label" for="sectionH_question9_value5"><b>5</b> This rarely affects other activities</label></td>
+  <td><input type="radio" name="sectionH_question9" id="sectionH_question9_value6" value="6" /><label class="question__label" for="sectionH_question9_value6"><b>6</b> Unproblematic – does not affect other activities</label></td>
 </tr>
 <!-- TT QUESTIONS TT -->
 
@@ -782,60 +783,118 @@ A to H: Scored 0-6:<br>0: I cannot do this<br>1: My capacity will be severely re
 
   </table>
   <div class="average">Average: 0</div>
-</div>
+</section>
 <!-- TT SECTIONS TT -->
 
+    <div class="result-overview">
+      <h2 class="result-overview__title">Results</h2>
+      <div class="result-overview__content">
+        <div data-section="sectionA" class="result-overview__item"><p>Personal hygiene / basic functions</p><span class="result-overview__average">0</span></div><div data-section="sectionB" class="result-overview__item"><p>Walking – moving around</p><span class="result-overview__average">0</span></div><div data-section="sectionC" class="result-overview__item"><p>Being upright</p><span class="result-overview__average">0</span></div><div data-section="sectionD" class="result-overview__item"><p>Activities in the home</p><span class="result-overview__average">0</span></div><div data-section="sectionE" class="result-overview__item"><p>Communication</p><span class="result-overview__average">0</span></div><div data-section="sectionF" class="result-overview__item"><p>Activities outside your home</p><span class="result-overview__average">0</span></div><div data-section="sectionG" class="result-overview__item"><p>Reactions to light and sound</p><span class="result-overview__average">0</span></div><div data-section="sectionH" class="result-overview__item"><p>Concentration</p><span class="result-overview__average">0</span></div>
+      </div>
+    </div>
+  </div>
 
+  <footer class="footer">
+    <a class="link footer__content" href="https://www.preprints.org/manuscript/202309.2091/v1" target="_blank">Based on
+      a preprint 'Assessing Functional Capacity in ME/CFS'</a>
+    <a class="link" href="https://github.com/petrroll/i-funcap" target="_blank"><img width="28"
+        src="../static/img/github-mark.svg" alt="GitHub project"></a>
+  </footer>
 
+  <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+      // Display default selected value in custom select
+      document.querySelectorAll('.custom-select-wrapper').forEach(wrapper => {
+        const selectedOption = wrapper.querySelector('.custom-option.selected');
+        if (selectedOption) {
+          const selectValue = wrapper.querySelector('.custom-select__value');
+          selectValue.textContent = selectedOption.textContent;
+        }
+      });
+    });
 
+    function getLanguageName(languageCode) {
+      const displayNames = new Intl.DisplayNames(['en'], { type: 'language' });
+      return displayNames.of(languageCode);
+    }
 
+    for (const dropdown of document.querySelectorAll(".custom-select-wrapper")) {
+      dropdown.addEventListener('click', function () {
+        this.querySelector('.custom-select').classList.toggle('open');
+      })
+    }
 
+    for (const option of document.querySelectorAll(".custom-option")) {
+      option.addEventListener('click', function () {
+        if (!this.classList.contains('selected')) {
+          this.parentNode.querySelector('.custom-option.selected').classList.remove('selected');
+          this.classList.add('selected');
+          this.closest('.custom-select').querySelector('.custom-select__value').textContent = this.textContent;
+        }
+      })
+    }
 
+    window.addEventListener('click', function (e) {
+      for (const select of document.querySelectorAll('.custom-select')) {
+        if (!select.contains(e.target)) {
+          select.classList.remove('open');
+        }
+      }
+    });
 
+    window.addEventListener('DOMContentLoaded', (event) => {
+      // Get full language name
+      document.getElementById('lang_select').textContent = getLanguageName(document.getElementById('lang_select').textContent);
+    });
 
-    <script>
-      function calculateAverage(sectionId) {
-        var section = document.getElementById(sectionId);
-        var questions = section.getElementsByClassName("question");
-        var total = 0;
-        var count = 0;
+    function getLanguageName(languageCode) {
+      const displayNames = new Intl.DisplayNames(['en'], { type: 'language' });
+      return displayNames.of(languageCode);
+    }
 
-        for (var i = 0; i < questions.length; i++) {
-          var question = questions[i];
-          var answers = question.getElementsByTagName("input");
+    function calculateAverage(sectionId) {
+      var section = document.getElementById(sectionId);
+      var questions = section.getElementsByClassName("question");
+      var total = 0;
+      var count = 0;
 
-          for (var j = 0; j < answers.length; j++) {
-            if (answers[j].checked) {
-              total += parseInt(answers[j].value);
-              count++;
-              break;
-            }
+      for (var i = 0; i < questions.length; i++) {
+        var question = questions[i];
+        var answers = question.getElementsByTagName("input");
+
+        for (var j = 0; j < answers.length; j++) {
+          if (answers[j].checked) {
+            total += parseInt(answers[j].value);
+            count++;
+            break;
           }
         }
-
-        var average = count > 0 ? total / count : 0;
-        section.getElementsByClassName("average")[0].innerHTML = "Average: " + average;
       }
 
-      function addRecalculateHandlers(section) {
-        var questions = section.getElementsByClassName("question");
+      var average = count > 0 ? total / count : 0;
+      section.getElementsByClassName("average")[0].innerHTML = "Average: " + +average.toFixed(1);
+      document.querySelector(`[data-section="${sectionId}"]`).querySelector(".result-overview__average").innerHTML = +average.toFixed(1);
+    }
 
-        for (var i = 0; i < questions.length; i++) {
-          var question = questions[i];
-          var answers = question.getElementsByTagName("input");
+    function addRecalculateHandlers(section) {
+      var questions = section.getElementsByClassName("question");
 
-          for (var j = 0; j < answers.length; j++) {
-            answers[j].addEventListener("click", function () {
-              calculateAverage(section.id);
-            });
-          }
+      for (var i = 0; i < questions.length; i++) {
+        var question = questions[i];
+        var answers = question.getElementsByTagName("input");
+
+        for (var j = 0; j < answers.length; j++) {
+          answers[j].addEventListener("click", function () {
+            calculateAverage(section.id);
+          });
         }
       }
+    }
 
-      var sections = document.getElementsByClassName("section");
-      for (var i = 0; i < sections.length; i++) {
-        addRecalculateHandlers(sections[i]);
-      }
-    </script>
-  </body>
+    var sections = document.getElementsByClassName("section");
+    for (var i = 0; i < sections.length; i++) {
+      addRecalculateHandlers(sections[i]);
+    }
+  </script>
+</body>
 </html>
