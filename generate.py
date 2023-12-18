@@ -3,6 +3,38 @@ import os
 
 langs_folder = "langs"
 output_folder = "output"
+static_folder = "static"
+
+def clear_directory(directory: str):
+    if os.path.exists(directory):
+        for item in os.listdir(directory):
+            item_path = os.path.join(directory, item)
+            if os.path.isdir(item_path):
+                clear_directory(item_path)
+            else:
+                os.remove(item_path)
+        os.rmdir(directory)
+
+def copy_static_folder(src_folder: str, dst_folder: str):
+    if os.path.exists(dst_folder):
+        clear_directory(dst_folder)
+    else:
+        os.makedirs(dst_folder)
+
+    for item in os.listdir(src_folder):
+        s = os.path.join(src_folder, item)
+        d = os.path.join(dst_folder, item)
+        if os.path.isdir(s):
+            if not os.path.exists(d):
+                os.makedirs(d)
+            copy_static_folder(s, d)
+        else:
+            if not os.path.exists(os.path.dirname(d)):
+                os.makedirs(os.path.dirname(d))
+            with open(s, 'rb') as source_file:
+                data = source_file.read()
+            with open(d, 'wb') as dest_file:
+                dest_file.write(data)
 
 def read_block_lines(f: TextIOWrapper) -> list[str]:
     lines = []
@@ -125,4 +157,4 @@ for file in os.listdir(langs_folder):
     generated_variants.append((lang, variant))
 
 generate_index(generated_variants)
-
+copy_static_folder(f'{static_folder}', f'{output_folder}/{static_folder}')
